@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Load all unit .md files and extract frontmatter
+const unitFiles = import.meta.glob('../content/units/*.md', { eager: true });
+const units = Object.values(unitFiles).map((mod) => (mod as { frontmatter: any }).frontmatter);
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legion Units</title>
+  </head>
+  <body style="font-family: sans-serif; background: #111; color: #eee; padding: 2rem;">
+    <Navbar />
+    <h1 style="margin-bottom: 2rem;">Legion Faction Units</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+      {units.map(unit => (
+        <a href={`/units/${unit.slug}`} style="text-decoration: none; color: inherit;">
+          <div style="background: #222; padding: 1rem; border-radius: 8px;">
+            <img src={unit.image} alt={unit.title} style="width: 100%; border-radius: 4px;" />
+            <h2>{unit.title}</h2>
+            <p>{unit.type} • Metal: {unit.metalCost} • Energy: {unit.energyCost}</p>
+            <p>{unit.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<script is:inline>
+  const chartId = "${chartId}";
+  window.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById(chartId);
+    const dataEl = document.getElementById("data-" + chartId);
+
+    if (!canvas || !dataEl) {
+      console.error("🚫 Still missing canvas or data element");
+    } else {
+      const stats = JSON.parse(dataEl.textContent);
+      const ctx = canvas.getContext("2d");
+
+      new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: ["DPS", "Health", "Speed", "Range"],
+          datasets: [{
+            label: "Unit Stats",
+            data: stats,
+            backgroundColor: "rgba(0,255,102,0.2)",
+            borderColor: "#00ff66",
+            pointBackgroundColor: "#00ff66"
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              beginAtZero: true,
+              pointLabels: { color: "#ccc" },
+              grid: { color: "#444" },
+              angleLines: { color: "#444" },
+              ticks: {
+                color: "#aaa",
+                backdropColor: "#111"
+              }
+            }
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
+    }
+  });
+</script>

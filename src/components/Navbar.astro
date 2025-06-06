@@ -1,0 +1,79 @@
+---
+const types = [
+  "Bots", "Vehicles", "Air", "Sea", "Hover",
+  "Factories", "Defense", "Buildings"
+];
+
+// Optionally pass `activeType` as a prop
+const { activeType = "Bots" } = Astro.props;
+---
+<style>
+  nav {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.5rem 1rem;
+  }
+
+  ul.nav-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  li.tab {
+    position: relative;
+  }
+
+  a.tab-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: green;
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  a.tab-link:hover {
+    background: rgba(0, 255, 0, 0.2);
+  }
+
+  a.tab-link.active {
+    background: green;
+    color: white;
+  }
+
+  li.tab.active::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+  }
+</style>
+
+<nav style="padding: 1rem; margin-bottom: 2rem;">
+  <ul class="nav-tabs">
+    {types.map(type => {
+      const isActive = type.toLowerCase() === activeType.toLowerCase();
+      return (
+        <li class={`tab ${isActive ? 'active' : ''}`}>
+          <a
+            href={`/type/${type.toLowerCase()}`}
+            class={`tab-link ${isActive ? 'active' : ''}`}
+          >
+            {type}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>

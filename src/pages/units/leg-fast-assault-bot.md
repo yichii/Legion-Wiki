@@ -16,4 +16,5 @@ speed: 90
 weapons: "Close-Quarters Ground-to-Ground Gauss-Cannon"
 dps: 107
 weaponRange: 180
+techLevel: 1
 ---

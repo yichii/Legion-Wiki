@@ -16,4 +16,5 @@ speed: 78
 weapons: ""
 dps: 0
 weaponRange: 20
+techLevel: 1
 ---

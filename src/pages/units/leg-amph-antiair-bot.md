@@ -16,4 +16,5 @@ speed: 55
 weapons: "Advanced Ground-to-Air Salvo Missle Launcher"
 dps: 55
 weaponRange: 760
+techLevel: 1
 ---

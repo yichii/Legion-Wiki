@@ -1,12 +1,15 @@
 ---
+import { marked } from 'marked';
+import Navbar from '../components/Navbar.astro';
+
 const {
   title, image, counterpart, description,
   metalCost, energyCost, buildTime, health, sightRange,
   speed, weapons, dps, weaponRange, techLevel
 } = Astro.props.frontmatter;
 
-import Navbar from '../components/Navbar.astro';
-import RadarChart from '../components/RadarChart.astro'
+// ✅ Render Markdown from frontmatter description
+const compiledDescription = marked(description);
 ---
 
 <html lang="en">
@@ -60,6 +63,10 @@ import RadarChart from '../components/RadarChart.astro'
       color: #ccc;
     }
     
+    .description p {
+      margin-bottom: 1rem;
+    }
+    
     .radar-placeholder {
       margin-top: 2rem;
       height: 300px;
@@ -100,14 +107,9 @@ import RadarChart from '../components/RadarChart.astro'
       </div>
     </div>
     
-    <div style="margin-top: 2rem;">
-      <RadarChart dps={dps} health={health} speed={speed} weaponRange={weaponRange} />
-      
-    </div>
-    
     <!-- Description -->
     <div class="description">
-      <p>{description}</p>
+      <div set:html={compiledDescription} />
     </div>
   </div>
 </body>

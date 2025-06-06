@@ -16,4 +16,5 @@ speed: 42
 weapons: "Light Ground-to-Ground Heat Ray and Medium Shotgun"
 dps: 160
 weaponRange: 360
+techLevel: 1
 ---

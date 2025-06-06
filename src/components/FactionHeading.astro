@@ -27,6 +27,11 @@ const { faction = "Legion", type = "Bots" } = Astro.props;
 </style>
 
 <div class="faction-heading">
-  <span class="faction-name">{faction}</span>
-  <span class="unit-type">{type}</span>
+  <h1>
+    <a href="/" style="color: #0f0; text-decoration: none;">
+      {faction}
+    </a>
+    {' '}
+    {type}
+  </h1>
 </div>

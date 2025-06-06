@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "astro": "^5.9.0",
-    "chart.js": "^4.4.9"
+    "marked": "^15.0.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

@@ -16,4 +16,5 @@ speed: 44
 weapons: "Rockets"
 dps: 45
 weaponRange: 460
+techLevel: 1
 ---

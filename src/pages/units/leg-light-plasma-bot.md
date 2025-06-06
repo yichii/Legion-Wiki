@@ -16,4 +16,5 @@ speed: 51
 weapons: "Forward Plasma Cannon"
 dps: 45
 weaponRange: 400
+techLevel: 1
 ---

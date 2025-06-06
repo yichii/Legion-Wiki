@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Karkinos"
-slug: "leg-medium-dual-weapon-infantry-bot"
+slug: "leg-med-dual-weapon-infantry-bot"
 type: "Bots"
 image: "/images/units/leg-med-dual-weapon-infantry-bot.png"
 counterpart: "/images/arm-lazarus.png"

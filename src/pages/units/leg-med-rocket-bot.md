@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Ballista"
-slug: "leg-medium-rocket-bot"
+slug: "leg-med-rocket-bot"
 type: "Bots"
 image: "/images/units/leg-med-rocket-bot.png"
 counterpart: "/images/arm-lazarus.png"

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Bot"
-slug: "legion-con-bot"
+slug: "leg-con-bot"
 type: "Bots"
 image: "/images/units/legion-con-bot.png"
 counterpart: "/images/core-mech.png"

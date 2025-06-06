@@ -5,7 +5,13 @@ slug: "leg-skirmish-bot"
 type: "Bots"
 image: "/images/units/leg-skirmish-bot.png"
 counterpart: "/images/core-grunt.png"
-description: "Fast and annoying skirmish bot."
+description: |
+  **The Goblin** is a fast, low-cost skirmish bot designed to harass, scout, and chip away at enemy forces. Armed with a rapid-fire machine gun and boasting high mobility, it excels at hit-and-run tactics and early map control.
+
+  While fragile on its own, Goblins become lethal in packs — swarming slow targets, pressuring expansions, or delaying tech paths. Their excellent vision also makes them great at spotting ambushes or guiding artillery.
+
+  **Best used for:** Early map control, raiding constructors, light harassment  
+  **Avoid:** Heavy turrets, AoE, or direct 1v1s with tanky units
 
 metalCost: 25
 energyCost: 500

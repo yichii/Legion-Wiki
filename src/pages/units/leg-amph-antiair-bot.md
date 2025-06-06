@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/UnitLayout.astro
-title: "o"
+title: "Toxotai"
 slug: "leg-amph-antiair-bot"
 type: "Bots"
 image: "/images/units/leg-amph-antiair-bot.png"

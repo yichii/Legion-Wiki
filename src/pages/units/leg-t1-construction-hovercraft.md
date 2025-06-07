@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Hovercraft"
 slug: "leg-t1-construction-hovercraft"
+shortRole: "Construction Hovercraft"
 type: "Hover"
 image: "/images/units/leg-t1-construction-hovercraft.png"
 counterpart: "/images/core-mech.png"

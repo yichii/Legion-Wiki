@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Ballista"
 slug: "leg-med-rocket-bot"
+shortRole: "Medium Rocket Bot"
 type: "Bots"
 image: "/images/units/leg-med-rocket-bot.png"
 counterpart: "/images/arm-lazarus.png"

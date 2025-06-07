@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Otter"
 slug: "leg-amphibious-construction-vehicle"
+shortRole: "Amphibious Construction Vehicle"
 type: "Vehicles"
 image: "/images/units/leg-amphibious-construction-vehicle.png"
 counterpart: "/images/arm-lazarus.png"

@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Zagreus"
 slug: "leg-stealthy-rez-bot"
+shortRole: "Stealthy Rez / Repair / Reclaim Bot"
 type: "Bots"
 image: "/images/units/leg-stealthy-rez-bot.png"
 counterpart: "/images/arm-lazarus.png"

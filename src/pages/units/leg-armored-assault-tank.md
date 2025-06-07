@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Decurion"
 slug: "leg-armored-assault-tank"
+shortRole: "Armored Assault Tank"
 type: "Vehicles"
 image: "/images/units/leg-armored-assault-tank.png"
 counterpart: "/images/arm-lazarus.png"

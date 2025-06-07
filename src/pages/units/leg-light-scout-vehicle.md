@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Wheelie"
 slug: "leg-light-scout-vehicle"
+shortRole: "Light Scout Vehicle"
 type: "Vehicles"
 image: "/images/units/leg-light-scout-vehicle.png"
 counterpart: "/images/arm-lazarus.png"

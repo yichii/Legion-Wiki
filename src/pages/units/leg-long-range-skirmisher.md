@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Lance"
 slug: "leg-long-range-skirmisher"
+shortRole: "Long Range Skirmisher"
 type: "Vehicles"
 image: "/images/units/leg-long-range-skirmisher.png"
 counterpart: "/images/arm-lazarus.png"

@@ -1,9 +1,10 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Blindfold"
-slug: "leg-juno-bomber-drone"
+slug: "leg-juno-bomber"
+shortRole: Anti-Radar/Jammer/Mine Bomber
 type: "Air"
-image: "/images/units/leg-juno-bomber-drone.png"
+image: "/images/units/leg-juno-bomber.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
   **The Blindfold** is a high-speed tactical bomber drone that specializes in electronic warfare. Instead of dealing damage directly, it disables or destroys enemy radar systems, mines, and stealth jammers using magnetic impulse bombs — clearing the way for conventional forces to strike.

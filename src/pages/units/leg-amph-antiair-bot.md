@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Toxotai"
 slug: "leg-amph-antiair-bot"
+shortRole: "Amphibious Anti-Air Bot"
 type: "Bots"
 image: "/images/units/leg-amph-antiair-bot.png"
 counterpart: "/images/arm-lazarus.png"

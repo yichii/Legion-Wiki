@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Satyr"
 slug: "leg-light-plasma-bot"
+shortRole: "Light Plasma Bot"
 type: "Bots"
 image: "/images/units/leg-light-plasma-bot.png"
 counterpart: "/images/core-grunt.png"

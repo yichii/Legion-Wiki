@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Vehicle"
 slug: "leg-construction-vehicle"
+shortRole: "Construction Vehicle"
 type: "Vehicles"
 image: "/images/units/leg-construction-vehicle.png"
 counterpart: "/images/arm-lazarus.png"

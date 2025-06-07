@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Alpheus"
 slug: "leg-anti-air-hovercraft"
+shortRole: "Anti-Air Hovercraft"
 type: "Hover"
 image: "/images/units/leg-anti-air-hovercraft.png"
 counterpart: "/images/core-mech.png"

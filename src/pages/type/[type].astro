@@ -4,6 +4,7 @@ type Unit = {
   title: string;
   type: string;
   image: string;
+  shortRole?: string;
   counterpart?: string;
   description: string;
   metalCost: number;
@@ -19,6 +20,7 @@ type Unit = {
 };
 
 import Navbar from '../../components/Navbar.astro';
+import UnitCard from '../../components/UnitCard.astro';
 import FactionHeading from '../../components/FactionHeading.astro';
 
 // ✅ getStaticPaths
@@ -32,7 +34,7 @@ export async function getStaticPaths() {
   }));
 }
 
-// ✅ get units for this page
+// ✅ Get units for this page
 const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
 const units = Object.values(allUnits).map(u => u.frontmatter);
 
@@ -54,11 +56,12 @@ const filteredUnits = units
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 0.75rem;
       justify-items: center;
+      padding: 2rem;
     }
     
     .unit-card {
       background-color: #1a1a1a;
-      padding: 0rem;
+      padding: 0;
       border-radius: 10px;
       transition: transform 0.2s ease;
       width: 100%;
@@ -79,18 +82,21 @@ const filteredUnits = units
 </head>
 
 <body style="font-family: sans-serif; background-color: #111; color: #eee; margin: 0;">
-  
   <div style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
     <FactionHeading faction="Legion" type={typeCapitalized} />
-    <Navbar activeType={typeCapitalized} />   
+    <Navbar activeType={typeCapitalized} />
+    
     {filteredUnits.length === 0 ? (
       <p style="text-align: center;">No units found for this type.</p>
       ) : (
       <div class="unit-grid">
         {filteredUnits.map(unit => (
-          <a href={`/units/${unit.slug}`} class="unit-card">
-            <img src={unit.image} alt={unit.title} />
-          </a>
+          <UnitCard
+          title={unit.title}
+          image={unit.image}
+          slug={unit.slug}
+          shortRole={unit.shortRole ?? "Unknown Role"}
+          />
           ))}
         </div>
         )}

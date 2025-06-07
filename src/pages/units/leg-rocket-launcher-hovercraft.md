@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Salacia"
 slug: "leg-rocket-launcher-hovercraft"
+shortRole: "Rocket Launcher Hovercraft"
 type: "Hover"
 image: "/images/units/leg-rocket-launcher-hovercraft.png"
 counterpart: "/images/core-mech.png"

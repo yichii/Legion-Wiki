@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Barrage"
 slug: "leg-napalm-artillery"
+shortRole: "Napalm Artillery"
 type: "Vehicles"
 image: "/images/units/leg-napalm-artillery.png"
 counterpart: "/images/arm-lazarus.png"

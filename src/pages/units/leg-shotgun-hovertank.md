@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Cardea"
 slug: "leg-shotgun-hovertank"
+shortRole: "Shotgun Hovertank"
 type: "Hover"
 image: "/images/units/leg-shotgun-hovertank.png"
 counterpart: "/images/core-mech.png"

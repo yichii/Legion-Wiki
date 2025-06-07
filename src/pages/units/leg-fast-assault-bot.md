@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Phobos"
 slug: "leg-fast-assault-bot"
+shortRole: "Fast Assault Bot"
 type: "Bots"
 image: "/images/units/leg-fast-assault-bot.png"
 counterpart: "/images/arm-lazarus.png"

@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Cetus"
 slug: "leg-light-amphibious-tank"
+shortRole: "Light Amphibious Tank"
 type: "Vehicles"
 image: "/images/units/leg-light-amphibious-tank.png"
 counterpart: "/images/arm-lazarus.png"

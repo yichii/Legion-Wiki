@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Glaucus"
 slug: "leg-fast-attack-hovercraft"
+shortRole: "Fast Attack Hovercraft"
 type: "Hover"
 image: "/images/units/leg-fast-attack-hovercraft.png"
 counterpart: "/images/core-mech.png"

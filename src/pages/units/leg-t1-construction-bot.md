@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Bot"
 slug: "leg-t1-construction-bot"
+shortRole: "Construction Bot"
 type: "Bots"
 image: "/images/units/legion-t1-construction-bot.png"
 counterpart: "/images/core-mech.png"

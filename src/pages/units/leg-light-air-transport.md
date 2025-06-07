@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Aeolus"
 slug: "leg-light-air-transport"
+shortRole: "Light Air Transport"
 type: "Air"
 image: "/images/units/leg-light-air-transport.png"
 counterpart: "/images/arm-lazarus.png"

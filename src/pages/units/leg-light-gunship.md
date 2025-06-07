@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Mosquito"
 slug: "leg-light-gunship"
+shortRole: "Light Gunship"
 type: "Air"
 image: "/images/units/leg-light-gunship.png"
 counterpart: "/images/arm-lazarus.png"

@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Alaris"
 slug: "leg-fast-assault-tank"
+shortRole: "Fast Assault Tank"
 type: "Vehicles"
 image: "/images/units/leg-fast-assault-tank.png"
 counterpart: "/images/arm-lazarus.png"

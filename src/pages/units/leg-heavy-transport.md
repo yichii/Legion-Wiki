@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Hippotes"
 slug: "leg-heavy-transport"
+shortRole: "Heavy Transport"
 type: "Air"
 image: "/images/units/leg-heavy-transport.png"
 counterpart: "/images/arm-lazarus.png"

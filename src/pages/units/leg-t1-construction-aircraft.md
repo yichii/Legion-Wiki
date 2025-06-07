@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Aircraft"
 slug: "leg-t1-construction-aircraft"
+shortRole: "Construction Aircraft"
 type: "Air"
 image: "/images/units/leg-t1-construction-aircraft.png"
 counterpart: "/images/arm-lazarus.png"

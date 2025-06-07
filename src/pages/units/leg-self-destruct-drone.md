@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Martyr"
 slug: "leg-self-destruct-drone"
+shortRole: "Kamikaze Drone"
 type: "Air"
 image: "/images/units/leg-self-destruct-drone.png"
 counterpart: "/images/arm-lazarus.png"

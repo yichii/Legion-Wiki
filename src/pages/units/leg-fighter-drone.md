@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Noctua"
 slug: "leg-fighter-drone"
+shortRole: "Fighter/Scout Drone"
 type: "Air"
 image: "/images/units/leg-fighter-drone.png"
 counterpart: "/images/arm-lazarus.png"

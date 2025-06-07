@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Nereus"
 slug: "leg-hovertank"
+shortRole: "Hovertank"
 type: "Hover"
 image: "/images/units/leg-hovertank.png"
 counterpart: "/images/core-mech.png"

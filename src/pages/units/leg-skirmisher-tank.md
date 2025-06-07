@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Helios"
 slug: "leg-skirmisher-tank"
+shortRole: "Skirmisher Tank"
 type: "Vehicles"
 image: "/images/units/leg-skirmisher-tank.png"
 counterpart: "/images/arm-lazarus.png"

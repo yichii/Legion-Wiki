@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Goblin"
 slug: "leg-skirmish-bot"
+shortRole: "Skirmish Bot"
 type: "Bots"
 image: "/images/units/leg-skirmish-bot.png"
 counterpart: "/images/core-grunt.png"

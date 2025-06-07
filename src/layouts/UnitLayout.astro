@@ -1,6 +1,7 @@
 ---
 import { marked } from 'marked';
 import Navbar from '../components/Navbar.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const {
   title, image, counterpart, description,
@@ -8,91 +9,19 @@ const {
   speed, weapons, dps, weaponRange, techLevel
 } = Astro.props.frontmatter;
 
-// ✅ Render Markdown from frontmatter description
 const compiledDescription = marked(description);
 ---
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{title} - Legion Unit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    .page {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-    }
-    
-    .layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .unit-image {
-      flex: 1 1 300px;
-      max-width: 400px;
-    }
-    
-    .stats-panel {
-      flex: 1 1 400px;
-      background: #222;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
-    }
-    
-    .stats-panel h3 {
-      margin-top: 0;
-      color: #ccc;
-      font-weight: bold;
-    }
-    
-    .stat-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.3rem 0;
-      border-bottom: 1px solid #333;
-    }
-    
-    .description {
-      margin-top: 2rem;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
-    }
-    
-    .description p {
-      margin-bottom: 1rem;
-    }
-    
-    .radar-placeholder {
-      margin-top: 2rem;
-      height: 300px;
-      background: #222;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 1.2rem;
-    }
-  </style>
-</head>
-
-<body style="font-family: sans-serif; background-color: #111; color: #eee; margin: 0;">
+<BaseLayout title={`${title} - Legion Unit`}>
   <Navbar />
   <div class="page">
     <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{title}</h1>
     
     <div class="layout">
-      <!-- Image -->
       <div class="unit-image">
         <img src={image} alt={title} style="width: 100%; border-radius: 10px;" />
       </div>
       
-      <!-- Stats -->
       <div class="stats-panel">
         <h3>Tech Level {techLevel}</h3>
         <div class="stat-row"><span>Metal Cost</span><span>{metalCost}</span></div>
@@ -107,10 +36,71 @@ const compiledDescription = marked(description);
       </div>
     </div>
     
-    <!-- Description -->
     <div class="description">
       <div set:html={compiledDescription} />
     </div>
   </div>
-</body>
-</html>
+
+  <style>
+    .page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .unit-image {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    .stats-panel {
+      flex: 1 1 400px;
+      background: #222;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+    }
+
+    .stats-panel h3 {
+      margin-top: 0;
+      color: #ccc;
+      font-weight: bold;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .description {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .description p {
+      margin-bottom: 1rem;
+    }
+
+    .radar-placeholder {
+      margin-top: 2rem;
+      height: 300px;
+      background: #222;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 1.2rem;
+    }
+  </style>
+</BaseLayout>

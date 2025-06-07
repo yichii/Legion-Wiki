@@ -2,6 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Sapper"
 slug: "leg-stealthy-minelayer-vehicle"
+shortRole: "Stealthy Minelayer / Minesweeper"
 type: "Vehicles"
 image: "/images/units/leg-stealthy-minelayer-vehicle.png"
 counterpart: "/images/arm-lazarus.png"

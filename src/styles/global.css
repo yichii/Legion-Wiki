@@ -30,3 +30,68 @@ h1, h2, h3 {
 .glow-text {
   text-shadow: 0 0 4px var(--accent-color), 0 0 8px var(--accent-color);
 }
+
+/* ─────────────────────────────
+🔗 Navbar Styles
+───────────────────────────── */
+
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.unit-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.stats-panel {
+  flex: 1 1 400px;
+  background: #222;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.stats-panel h3 {
+  margin-top: 0;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.description {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.description p {
+  margin-bottom: 1rem;
+}
+
+.radar-placeholder {
+  margin-top: 2rem;
+  height: 300px;
+  background: #222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 1.2rem;
+}

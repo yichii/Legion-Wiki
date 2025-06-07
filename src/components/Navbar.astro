@@ -1,17 +1,55 @@
 ---
 const types = [
-{ name: "Bots" },
-{ name: "Vehicles" },
-{ name: "Air" },
-{ name: "Sea" },
-{ name: "Hover" },
-{ name: "Factories" },
-{ name: "Defense" },
-{ name: "Buildings" },
+  { name: "Bots" },
+  { name: "Vehicles" },
+  { name: "Air" },
+  { name: "Sea" },
+  { name: "Hover" },
+  { name: "Factories" },
+  { name: "Defense" },
+  { name: "Buildings" },
 ];
 
 const { activeType = "Bots" } = Astro.props;
+
+// Hardcoded list of unit types not ready yet
+const inactiveTypes = ["Sea", "Factories", "Defense", "Buildings"];
 ---
+
+<nav>
+  <ul class="nav-tabs">
+    {types.map(({ name }) => {
+      const isActive = name.toLowerCase() === activeType.toLowerCase();
+      const isDisabled = inactiveTypes.includes(name);
+      return (
+        <li class="tab">
+          <span class="tab-shape">
+            {name === "Bots" && <svg><circle cx="6" cy="6" r="6" fill="white" /></svg>}
+            {name === "Vehicles" && <svg><polygon points="6,0 12,6 6,12 0,6" fill="white" /></svg>}
+            {name === "Air" && <svg><polygon points="6,0 12,10 0,10" fill="white" /></svg>}
+            {name === "Sea" && <svg><circle cx="6" cy="6" r="5" stroke="white" stroke-width="2" fill="none" /></svg>}
+            {name === "Hover" && <svg><ellipse cx="6" cy="6" rx="5" ry="3" fill="white" /></svg>}
+            {name === "Factories" && <svg><rect width="12" height="12" fill="white" /></svg>}
+            {name === "Defense" && (
+              <svg viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="white" />
+              </svg>
+            )}
+            {name === "Buildings" && <svg><rect x="1" y="1" width="10" height="10" fill="white" /></svg>}
+          </span>
+
+          {isDisabled ? (
+            <span class="tab-link disabled" title="Coming Soon">{name}</span>
+          ) : (
+            <a href={`/type/${name.toLowerCase()}`} class={`tab-link ${isActive ? 'active' : ''}`}>
+              {name}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</nav>
 
 <style>
   nav {
@@ -19,7 +57,7 @@ const { activeType = "Bots" } = Astro.props;
     padding: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   ul.nav-tabs {
     display: flex;
     justify-content: center;
@@ -29,12 +67,12 @@ const { activeType = "Bots" } = Astro.props;
     padding: 0;
     gap: 0.5rem;
   }
-  
+
   li.tab {
     position: relative;
     text-align: center;
   }
-  
+
   .tab-shape {
     position: absolute;
     top: -15px;
@@ -44,19 +82,18 @@ const { activeType = "Bots" } = Astro.props;
     transition: top 0.2s ease;
     pointer-events: none;
   }
-  
+
   .tab:hover .tab-shape {
     top: -18px;
   }
-  
+
   .tab-shape svg {
     width: 12px;
     height: 12px;
     display: block;
     fill: white !important;
   }
-  
-  
+
   .tab-link {
     display: inline-block;
     padding: 0.4rem 0.75rem;
@@ -67,77 +104,25 @@ const { activeType = "Bots" } = Astro.props;
     border-radius: 4px;
     transition: background 0.2s;
     min-width: 80px;
+    font-family: var(--font-sans, sans-serif);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
-  
+
   .tab-link:hover {
     background: #222;
   }
-  
+
   .tab-link.active {
     background: #00ff00;
     color: black;
   }
-</style>
 
-<nav>
-  <ul class="nav-tabs">
-    {types.map(({ name }) => {
-      const isActive = name.toLowerCase() === activeType.toLowerCase();
-      return (
-      <li class="tab">
-        <span class="tab-shape">
-          {
-            name === "Bots" && (
-            <svg><circle cx="6" cy="6" r="6" fill="white" /></svg>
-            )
-          }
-          {
-            name === "Vehicles" && (
-            <svg><polygon points="6,0 12,6 6,12 0,6" fill="white" /></svg>
-            )
-          }
-          {
-            name === "Air" && (
-            <svg><polygon points="6,0 12,10 0,10" fill="white" /></svg>
-            )
-          }
-          {
-            name === "Sea" && (
-            <svg><circle cx="6" cy="6" r="5" stroke="white" stroke-width="2" fill="none" /></svg>
-            )
-          }
-          {
-            name === "Hover" && (
-            <svg><ellipse cx="6" cy="6" rx="5" ry="3" fill="white" /></svg>
-            )
-          }
-          {
-            name === "Factories" && (
-            <svg><rect width="12" height="12" fill="white" /></svg>
-            )
-          }
-          {
-            name === "Defense" && (
-            <svg viewBox="0 0 24 24">
-              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="white" />
-            </svg>
-            )
-          }
-          {
-            name === "Buildings" && (
-            <svg><rect x="1" y="1" width="10" height="10" fill="white" /></svg>
-            )
-          }
-        </span>
-        
-        <a
-        href={`/type/${name.toLowerCase()}`}
-        class={`tab-link ${isActive ? 'active' : ''}`}
-        >
-        {name}
-      </a>
-    </li>
-    );
-  })}
-</ul>
-</nav>
+  .tab-link.disabled {
+    background: #1a1a1a;
+    color: #555;
+    cursor: not-allowed;
+    pointer-events: none;
+    font-style: italic;
+  }
+</style>

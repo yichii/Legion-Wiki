@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Bot"
-slug: "leg-con-bot"
+slug: "leg-t1-construction-bot"
 type: "Bots"
-image: "/images/units/legion-t1-con-bot.png"
+image: "/images/units/legion-t1-construction-bot.png"
 counterpart: "/images/core-mech.png"
 description: |
   **The Construction Bot** is Legion’s most basic and cost-efficient builder unit. It can construct all Tier 1 structures and is critical for early economic growth, base expansion, and map control. Although slow and unarmed, it provides passive utility by generating a small amount of energy and expanding the player's storage capacity by +50 for both metal and energy.

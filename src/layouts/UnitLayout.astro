@@ -6,7 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const {
   title, image, type, counterpart, description,
   metalCost, energyCost, buildTime, health, sightRange,
-  speed, weapons, dps, weaponRange, techLevel
+  speed, weapons, dps, weaponRange, techLevel, buildPower
 } = Astro.props.frontmatter;
 
 const compiledDescription = marked(description);
@@ -29,17 +29,30 @@ const compiledDescription = marked(description);
         <div class="stat-row"><span>Build Time</span><span>{buildTime}</span></div>
         <div class="stat-row"><span>Health</span><span>{health}</span></div>
         <div class="stat-row"><span>Sight Range</span><span>{sightRange}</span></div>
+        
+        {type === 'Factories' ? (
+        <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
+        ) : buildPower !== undefined ? (
+        <>
+        <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+        <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
+        </>
+        ) : (
+        <>
         <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
         <div class="stat-row"><span>Weapons</span><span>{weapons}</span></div>
         <div class="stat-row"><span>DPS</span><span>{dps}</span></div>
         <div class="stat-row"><span>Weapon Range</span><span>{weaponRange}</span></div>
+        </>
+        )}
+      </div>
+      
+      
+      <div class="description">
+        <div set:html={compiledDescription} />
       </div>
     </div>
     
-    <div class="description">
-      <div set:html={compiledDescription} />
-    </div>
-  </div>
+    
+  </BaseLayout>
   
-  
-</BaseLayout>

@@ -34,7 +34,12 @@ for (const unit of units) {
   grouped.get(unit.type)?.push(unit);
 }
 for (const [type, unitList] of grouped) {
-  unitList.sort((a, b) => a.metalCost - b.metalCost);
+  unitList.sort((a, b) => {
+  if (a.techLevel !== b.techLevel) {
+    return a.techLevel - b.techLevel; // Sort by techLevel first
+  }
+  return a.metalCost - b.metalCost;   // If same techLevel, sort by metalCost
+});
 }
 ---
 

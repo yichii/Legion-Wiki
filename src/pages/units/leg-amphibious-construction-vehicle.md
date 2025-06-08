@@ -20,9 +20,7 @@ energyCost: 3100
 buildTime: 6540
 health: 950
 sightRange: 260
-speed: 57
-weapons: "N/A"
-dps: 0
-weaponRange: 0
+speed: 44
 techLevel: 1
+buildPower: 75
 ---

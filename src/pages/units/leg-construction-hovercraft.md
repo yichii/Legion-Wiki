@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Hovercraft"
-slug: "leg-t1-construction-hovercraft"
+slug: "leg-construction-hovercraft"
 shortRole: "Construction Hovercraft"
 type: "Hover"
-image: "/images/units/leg-t1-construction-hovercraft.png"
+image: "/images/units/leg-construction-hovercraft.png"
 counterpart: "/images/core-mech.png"
 description: |
   **The Construction Hovercraft** is Legion’s versatile amphibious builder, capable of navigating both land and shallow seas with ease. Designed for flexible base expansion, it plays a vital role in establishing naval facilities, forward defenses, or reclaiming contested zones near water.
@@ -21,8 +21,6 @@ buildTime: 4360
 health: 1390
 sightRange: 338
 speed: 73
-weapons: "N/A"
-dps: 0
-weaponRange: 0 
 techLevel: 1
+buildPower: 105
 ---

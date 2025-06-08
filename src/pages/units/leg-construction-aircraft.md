@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/UnitLayout.astro
 title: "Construction Aircraft"
-slug: "leg-t1-construction-aircraft"
+slug: "leg-construction-aircraft"
 shortRole: "Construction Aircraft"
 type: "Air"
-image: "/images/units/leg-t1-construction-aircraft.png"
+image: "/images/units/leg-construction-aircraft.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
   **The Legion Construction Aircraft** is a lightweight flying builder designed for rapid expansion and flexible base layouts. While fragile and completely unarmed, it compensates with high speed and full aerial mobility, allowing it to reach remote or contested build zones quickly.
@@ -21,8 +21,6 @@ buildTime: 7560
 health: 151
 sightRange: 351/527(Air)
 speed: 215
-weapons: "N/A"
-dps: 0
-weaponRange: 0
 techLevel: 1
+buildPower: 55
 ---

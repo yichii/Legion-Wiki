@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
@@ -14,7 +15,23 @@ const { title = "Legion Units" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="layout-wrapper">
+    <div class="layout-content">
+      <slot />
+    </div>
+    <Footer />
   </body>
 </html>
+
+<style>
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .layout-content {
+    flex: 1;
+  }
+</style>

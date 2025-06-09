@@ -4,7 +4,7 @@ title: "Experimental Gantry"
 slug: "leg-experimental-gantry"
 shortRole: "Produces Experimental Units"
 type: "Factories"
-image: "/images/units/leg-experimental-gantry"
+image: "/images/units/leg-experimental-gantry.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
   **The Toxotai** is a mobile amphibious anti-air bot armed with a high-range salvo missile launcher. Capable of defending both land and water units, it’s crucial for fending off early air raids, gunships, and bombers during tech transitions or expansion phases.

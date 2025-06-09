@@ -4,7 +4,7 @@ title: "Proteus"
 slug: "leg-all-terrain-combat-engineer"
 shortRole: "All-Terrain Combat Engineer"
 type: "Bots"
-image: "/images/units/leg-all-terrain-combat-engineer"
+image: "/images/units/leg-all-terrain-combat-engineer.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
   **The Proteus** is a fast and versatile combat engineer designed to traverse harsh terrain and support Legion forces wherever they fight. With excellent speed and all-terrain mobility, it can build and assist in locations unreachable by conventional constructors.

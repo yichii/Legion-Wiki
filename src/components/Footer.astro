@@ -1,15 +1,111 @@
-<footer style="background-color: #111; border-top: 1px solid #333; padding: 0.5rem 1rem;">
-  <div style="
-    max-width: 960px;
-    margin: 0 auto;
-    font-size: 0.90rem;
-    line-height: 1.4;
-    color: #666;
-    text-align: center;
-  ">
-    <p style="margin: 0;">
-      This wiki is a fan-made project for <strong>Beyond All Reason (BAR)</strong>, an open-source RTS game.<br />
-      All unit concepts, art, and balance are the work of the BAR development team and contributors. This site is not affiliated with the official BAR team.
-    </p>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-column">
+      <h4>UNIT TYPES</h4>
+      <ul>
+        <li><a href="/type/bots">Bots</a></li>
+        <li><a href="/type/vehicles">Vehicles</a></li>
+        <li><a href="/type/air">Air</a></li>
+        <li><a class="disabled">Sea (coming soon)</a></li>
+        <li><a href="/type/hover">Hover</a></li>
+        <li><a href="/type/factories">Factories</a></li>
+        <li><a class="disabled">Defense (coming soon)</a></li>
+        <li><a class="disabled">Buildings (coming soon)</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>COMMUNITY</h4>
+      <ul>
+        <li><a href="https://www.beyondallreason.info/" target="_blank">Play Beyond All Reason</a></li>
+        <li><a href="https://github.com/beyond-all-reason/Beyond-All-Reason" target="_blank">BAR GitHub</a></li>
+        <li><a href="https://discord.gg/beyondallreason" target="_blank">BAR Discord</a></li>
+      </ul>
+
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="https://wiki.beyondallreason.info/" target="_blank">Official BAR Wiki</a></li>
+        <li><a href="https://www.beyondallreason.info/" target="_blank">Official Website</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>ABOUT</h4>
+      <p>This wiki is a fan-made project for <strong>Beyond All Reason (BAR)</strong>, an open-source RTS game.</p>
+      <p>All unit concepts, art, and balance are the work of the BAR development team and contributors. This site is not officially affiliated with BAR.</p>
+      <p><small>A project by the Legion Wiki team.</small></p>
+      <p><a href="#" class="back-to-top">Back to top ↑</a></p>
+    </div>
   </div>
 </footer>
+
+<style>
+  .footer {
+    background-color: #111;
+    border-top: 1px solid #333;
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+
+  .footer-column h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 0.3rem;
+  }
+
+  .footer a {
+    color: var(--accent-color, limegreen);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer a.disabled {
+    color: #444;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  .back-to-top {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 700px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

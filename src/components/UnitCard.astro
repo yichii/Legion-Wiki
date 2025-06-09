@@ -4,7 +4,11 @@ const { title, image, slug, shortRole } = Astro.props;
 
 <a href={`/units/${slug}`} class="unit-card">
   <div class="unit-image-container">
-    <img src={image} alt={title} class="unit-thumbnail" />
+    <img src={image}
+    alt={title}
+    class="unit-thumbnail"
+    loading="lazy"
+    decoding="async"/>
     <div class="unit-overlay">
       <div class="unit-name">{title}</div>
       <div class="unit-role">{shortRole}</div>
@@ -23,22 +27,22 @@ const { title, image, slug, shortRole } = Astro.props;
     transition: transform 0.2s ease;
     font-family: var(--font-sans, inherit); /* 👈 inherits Rajdhani from global.css */
   }
-
+  
   .unit-card:hover {
     transform: scale(1.03);
   }
-
+  
   .unit-image-container {
     position: relative;
     width: 100%;
   }
-
+  
   .unit-thumbnail {
     width: 100%;
     display: block;
     border-radius: 8px;
   }
-
+  
   .unit-overlay {
     position: absolute;
     bottom: -100%;
@@ -53,11 +57,11 @@ const { title, image, slug, shortRole } = Astro.props;
     transition: bottom 0.25s ease;
     padding: 0.25rem;
   }
-
+  
   .unit-card:hover .unit-overlay {
     bottom: 0;
   }
-
+  
   .unit-name {
     font-weight: 600;
     font-size: 0.9rem;
@@ -66,7 +70,7 @@ const { title, image, slug, shortRole } = Astro.props;
     text-transform: uppercase;
     letter-spacing: 0.03em;
   }
-
+  
   .unit-role {
     font-size: 0.85rem;
     font-weight: 500;

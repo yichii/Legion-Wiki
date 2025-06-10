@@ -13,14 +13,12 @@ description: |
 
   **Best used for:** Concealing armies, protecting flanks, supporting stealth-based pushes  
   **Avoid:** Frontline exposure, AoE damage, operating solo without units to shield
-
-
 metalCost: 75
 energyCost: 1550
 buildTime: 5440
 health: 345
 sightRange: 250
-# jammerRange: 450
+jammerRange: 450
 speed: 39
 techLevel: 2
 ---

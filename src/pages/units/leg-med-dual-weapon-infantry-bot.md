@@ -20,7 +20,9 @@ buildTime: 4400
 health: 1540
 sightRange: 400
 speed: 42
-weapons: "Light Ground-to-Ground Heat Ray and Medium Shotgun"
+weapons: |
+  Light Ground-to-Ground Heat Ray
+  Medium Shotgun
 dps: 160
 weaponRange: 360
 techLevel: 1

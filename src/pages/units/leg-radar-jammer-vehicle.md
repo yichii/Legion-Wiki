@@ -18,7 +18,7 @@ energyCost: 1900
 buildTime: 5930
 health: 510
 sightRange: 300
-#jammerRange: 450
+jammerRange: 450
 speed: 41
 techLevel: 2
 ---

@@ -22,7 +22,7 @@ speed: 48
 weapons: "Heavy Ground-to-Ground Cleansing Heat Ray / Depth-Charge Launcher"
 dps: 265-413
 weaponRange: 400
-#radar: 300
-#sonar: 700
+radarRange: 300
+sonar: 700
 techLevel: 2
 ---

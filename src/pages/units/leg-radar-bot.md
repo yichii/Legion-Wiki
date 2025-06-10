@@ -20,7 +20,7 @@ energyCost: 1350
 buildTime: 3950
 health: 390
 sightRange: 925
-# radar: 2200
+radarRange: 2200
 speed: 45
 techLevel: 2
 ---

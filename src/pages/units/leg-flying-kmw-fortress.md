@@ -18,10 +18,10 @@ buildTime: 90000
 health: 16700
 sightRange: 600/900(Air)
 speed: 93
-weapons: | 
-  2x Plasma Cannons  
-  3x Burst-Fire Machine Guns  
-  Advanced Dragon-to-Air Rapid Missile Launcher
+weapons: |
+  2x Plasma Cannons
+  3x Burst-Fire Machine Guns
+  Advanced Air-to-Air Rapid Missile Launcher
 dps: 555
 weaponRange: 915
 techLevel: 2

@@ -39,6 +39,7 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
+  
 }
 
 .layout {
@@ -94,4 +95,30 @@ h1, h2, h3 {
   justify-content: center;
   color: #777;
   font-size: 1.2rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--accent-color, #00ff00);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.unit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.unit-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }

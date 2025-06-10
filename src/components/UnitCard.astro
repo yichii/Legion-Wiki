@@ -1,14 +1,12 @@
 ---
-const { title, image, slug, shortRole } = Astro.props;
+// props
+const { title, image, slug, shortRole, techLevel } = Astro.props;
 ---
 
 <a href={`/units/${slug}`} class="unit-card">
   <div class="unit-image-container">
-    <img src={image}
-    alt={title}
-    class="unit-thumbnail"
-    loading="lazy"
-    decoding="async"/>
+    <span class="tech-badge">T{techLevel}</span>
+    <img src={image} alt={title} class="unit-thumbnail" />
     <div class="unit-overlay">
       <div class="unit-name">{title}</div>
       <div class="unit-role">{shortRole}</div>
@@ -18,31 +16,38 @@ const { title, image, slug, shortRole } = Astro.props;
 
 <style>
   .unit-card {
-    display: block;
+    position: relative;
     max-width: 200px;
-    text-decoration: none;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
+    text-decoration: none;
     transition: transform 0.2s ease;
-    font-family: var(--font-sans, inherit); /* 👈 inherits Rajdhani from global.css */
   }
-  
-  .unit-card:hover {
-    transform: scale(1.03);
-  }
-  
+
   .unit-image-container {
     position: relative;
-    width: 100%;
   }
-  
+
+  .tech-badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    z-index: 1;
+    opacity: 0.85;
+  }
+
   .unit-thumbnail {
     width: 100%;
     display: block;
     border-radius: 8px;
   }
-  
+
   .unit-overlay {
     position: absolute;
     bottom: -100%;
@@ -57,25 +62,21 @@ const { title, image, slug, shortRole } = Astro.props;
     transition: bottom 0.25s ease;
     padding: 0.25rem;
   }
-  
+
   .unit-card:hover .unit-overlay {
     bottom: 0;
   }
-  
+
   .unit-name {
     font-weight: 600;
     font-size: 0.9rem;
-    line-height: 1.2;
     color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
   }
-  
+
   .unit-role {
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--accent-color, #00ff00);
     margin-top: 0.1rem;
-    line-height: 1.2;
   }
 </style>

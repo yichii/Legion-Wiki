@@ -19,7 +19,8 @@ buildTime: 9000
 health: 1400
 sightRange: 400
 speed: 45
-# droneMetalCost: 15 
-# droneEnergyCost: 500
+droneMetalCost: 15 
+droneEnergyCost: 500
 techLevel: 2
+buildPower: 10 seconds per drone
 ---

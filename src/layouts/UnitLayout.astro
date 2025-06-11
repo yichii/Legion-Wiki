@@ -17,6 +17,9 @@ const isRadarUnit = radarRange !== undefined;
 const isJammerUnit = jammerRange !== undefined;
 const isSonarUnit = sonarRange !== undefined;
 const isSensorOnly = !weapons && (isRadarUnit || isJammerUnit || isSonarUnit);
+
+// Don't show speed for static units
+const showSpeed = type !== 'Defense' && type !== 'Buildings';
 ---
 
 <BaseLayout title={`${title} - Legion Unit`}>
@@ -46,7 +49,9 @@ const isSensorOnly = !weapons && (isRadarUnit || isJammerUnit || isSonarUnit);
           <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
         ) : buildPower !== undefined ? (
           <>
-            <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            {showSpeed && (
+              <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            )}
             <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
           </>
         ) : isSensorOnly ? (
@@ -60,11 +65,15 @@ const isSensorOnly = !weapons && (isRadarUnit || isJammerUnit || isSonarUnit);
             {isSonarUnit && (
               <div class="stat-row"><span>Sonar Range</span><span>{sonarRange}</span></div>
             )}
-            <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            {showSpeed && (
+              <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            )}
           </>
         ) : (
           <>
-            <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            {showSpeed && (
+              <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
+            )}
             <div class="stat-row weapons-row">
               <span>Weapons</span>
               <span>

@@ -29,6 +29,12 @@ type Unit = {
 export async function getStaticPaths() {
   const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
   const units = Object.values(allUnits).map(u => u.frontmatter);
+  units.forEach(u => {
+    if (!u.type) {
+      console.warn(`Missing "type" for unit: ${u.title ?? 'Unknown Title'}`);
+    }
+  });
+  
   const uniqueTypes = [...new Set(units.map(u => u.type.toLowerCase()))];
   
   return uniqueTypes.map(type => ({

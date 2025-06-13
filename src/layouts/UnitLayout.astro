@@ -85,8 +85,10 @@ const showSpeed = type !== 'Defense' && type !== 'Buildings';
                       </div>
                       )}
                       
-                      {typeof dps !== 'undefined' && dps > 0 && (
-                      <div class="stat-row"><span>DPS</span><span>{dps}</span></div>
+                      {dps && typeof dps === 'string' && (
+                      <div class="stat-row">
+                        <strong>DPS:</strong> {dps}
+                      </div>
                       )}
                       
                       {typeof weaponRange !== 'undefined' && (

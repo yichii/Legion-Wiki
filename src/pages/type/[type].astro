@@ -7,7 +7,7 @@ import FactionHeading from '../../components/FactionHeading.astro';
 type Unit = {
   slug: string;
   title: string;
-  type: string;
+  type: string; // unitType
   image: string;
   shortRole?: string;
   counterpart?: string;
@@ -21,41 +21,53 @@ type Unit = {
   weapons: string;
   dps: number;
   weaponRange: number;
-  techLevel: number;
+  techLevel: number; // 1, 2, 3
   buildPower?: number;
 };
 
-// 🧠 Generate paths for each unique unit type
+const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
+const units = Object.values(allUnits).map(u => u.frontmatter);
+
 export async function getStaticPaths() {
   const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
   const units = Object.values(allUnits).map(u => u.frontmatter);
-  units.forEach(u => {
-    if (!u.type) {
-      console.warn(`Missing "type" for unit: ${u.title ?? 'Unknown Title'}`);
-    }
-  });
   
   const uniqueTypes = [...new Set(units.map(u => u.type.toLowerCase()))];
   
   return uniqueTypes.map(type => ({
-    params: { type }
+    params: { type },
   }));
 }
 
-// 🧠 Load units for the current type
-const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
-const units = Object.values(allUnits).map(u => u.frontmatter);
 
 const { type } = Astro.params;
 const typeCapitalized = type.charAt(0).toUpperCase() + type.slice(1);
 
-const filteredUnits = units
-.filter(u => u.type.toLowerCase() === type.toLowerCase())
-.sort((a, b) => {
-  if (a.techLevel !== b.techLevel) {
-    return a.techLevel - b.techLevel; // Sort by techLevel first
+// Group by tier
+const tiers = ['T1', 'T2', 'T3'];
+const tierLabels = {
+  T1: 'Tech Level 1',
+  T2: 'Tech Level 2',
+  T3: 'Tech Level 3',
+};
+const unitsByTier: Record<string, Unit[]> = {
+  T1: [],
+  T2: [],
+  T3: [],
+};
+
+for (const unit of units) {
+  if (unit.type.toLowerCase() === type.toLowerCase()) {
+    const tierKey = `T${unit.techLevel}`;
+    if (tiers.includes(tierKey)) {
+      unitsByTier[tierKey].push(unit);
+    }
   }
-  return a.metalCost - b.metalCost;   // If same techLevel, sort by metalCost
+}
+
+// Sort within tiers by metalCost (optional)
+tiers.forEach(tier => {
+  unitsByTier[tier].sort((a, b) => a.metalCost - b.metalCost);
 });
 ---
 
@@ -64,22 +76,27 @@ const filteredUnits = units
     <FactionHeading faction="Legion" type={typeCapitalized} />
     <Navbar activeType={type} />
     
-    {filteredUnits.length === 0 ? (
-      <p style="text-align: center;">No units found for this type.</p>
-      ) : (
-      <div class="unit-grid">
-        {filteredUnits.map(unit => (
-          <UnitCard
-          title={unit.title}
-          image={unit.image}
-          slug={unit.slug}
-          shortRole={unit.shortRole ?? "Unknown Role"}
-          techLevel={unit.techLevel}
-          />
-          
-          ))}
-        </div>
-        )}
+    {tiers
+      .filter(tier => unitsByTier[tier].length > 0)
+      .map(tier => (
+      <section>
+        <h2 style="margin-top: 2rem;">{tierLabels[tier as 'T1' | 'T2' | 'T3']}</h2>
+        <div class="unit-grid">
+          {unitsByTier[tier].map(unit => (
+            <UnitCard
+            title={unit.title}
+            image={unit.image}
+            slug={unit.slug}
+            shortRole={unit.shortRole ?? "Unknown Role"}
+            techLevel={unit.techLevel}
+            showTechBadge={false}
+            />
+            
+            ))}
+          </div>
+        </section>
+        ))}
+        
       </div>
       
       <style>

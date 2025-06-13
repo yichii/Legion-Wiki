@@ -20,7 +20,6 @@ health: 890
 sightRange: 835/1253(Air)
 speed: 300
 weapons: "Anti-Radar / Minefield / Jammer Magnetic Impulse Bomb"
-dps: 0
 weaponRange: 450
 techLevel: 1
 ---

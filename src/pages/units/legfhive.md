@@ -19,7 +19,6 @@ buildTime: 7500
 health: 1200
 sightRange: 455
 weapons: "Autonomous Drones"
-dps: 0
 weaponRange: 1100
 techLevel: 1
 ---

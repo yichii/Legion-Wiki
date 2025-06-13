@@ -19,7 +19,6 @@ health: 1110
 sightRange: 455/683(Air)
 speed: 210
 weapons: "Legion Mine Bomb"
-dps: 0
 weaponRange: 1600
 techLevel: 2
 ---

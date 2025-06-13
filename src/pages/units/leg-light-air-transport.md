@@ -21,8 +21,5 @@ buildTime: 3850
 health: 265
 sightRange: 260/390(Air)
 speed: 207
-weapons: "N/A"
-dps: 0
-weaponRange: 0
 techLevel: 1
 ---

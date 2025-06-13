@@ -10,17 +10,33 @@ const { title = "Legion Units" } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-  </head>
-  <body class="layout-wrapper">
-    <div class="layout-content">
-      <slot />
-    </div>
-    <Footer />
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+</head>
+<body class="layout-wrapper">
+  <div class="layout-content">
+    <slot />
+  </div>
+  <!-- Feedback Button -->
+  <button class="feedback-fab" onclick="document.getElementById('feedbackModal').showModal()">💬 Feedback</button>
+  
+  <!-- Feedback Modal -->
+  <dialog id="feedbackModal" class="feedback-modal">
+    <form method="dialog">
+      <h3>Send Feedback</h3>
+      <p>You can reach me through:</p>
+      <ul>
+        <li>📧 <strong>Email:</strong> <a href="mailto:legionwikiofficial@gmail.com">legionwikiofficial@gmail.com</a></li>
+        <li>💬 <strong>Discord:</strong> <code>@yichi</code></li>
+        <li>🎮 <strong>In-Game:</strong> Message <code>yichi</code> in BAR</li>
+      </ul>
+      <button type="submit" class="close-button">Close</button>
+    </form>
+  </dialog>
+  <Footer />
+</body>
 </html>
 
 <style>
@@ -30,7 +46,7 @@ const { title = "Legion Units" } = Astro.props;
     min-height: 100vh;
     margin: 0;
   }
-
+  
   .layout-content {
     flex: 1;
   }

@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Astraeus"
 slug: "legelrpcmech"
 shortRole: "Long-Range Cluster Plasma Siege Mech"
-type: "Bots"
+type: "T3"
 image: "/images/units/legelrpcmech.png"
 description: |
   **The Astraeus** is a tier-3 experimental long-range artillery walker designed for saturating massive areas with heavy plasma clusters. Its primary weapon — the *Shocker* — is a long-range g2g (ground-to-ground) cannon that fires cluster shells capable of obliterating stationary defenses or large enemy formations.

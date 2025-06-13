@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Keres"
 slug: "legkeres"
 shortRole: "Heavy Assault and Anti-Swarm Tank"
-type: "Vehicles"
+type: "T3"
 image: "/images/units/legkeres.png"
 description: |
   **The Keres** is a tier-3 armored riot tank, built for sustained pressure and frontline resilience. Its dual-weapon system features a heavy riot cannon for explosive area damage and twin rotary cannons for constant suppressive fire, making it especially lethal against clustered or lightly armored enemies.

@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Sol Invictus"
 slug: "legeheatraymech"
 shortRole: "Experimental Thermal Ordinance Mech"
-type: "Bots"
+type: "T3"
 image: "/images/units/legeheatraymech.png"
 description: |
   **The Sol Invictus** is an experimental T3 ultra-heavy mech that incinerates targets with twin heat rays while pounding enemy formations with riot cannons. Built for domination at short to mid range, it can vaporize entire groups of light and medium units in seconds while shrugging off massive punishment.
@@ -11,7 +11,7 @@ description: |
   With dedicated anti-air flak and high HP, it's designed to spearhead assaults against fortified positions, supported by midline and utility units. However, its relatively slow speed and limited range require tactical awareness — let it close the gap, and it will do the rest.
 
   **Best used for:** Frontline annihilation, mech-based spearheads, area denial  
-  **Avoid:** Being kited, EMP or paralysis traps, long-range artillery
+  **Avoid:** Being kited, long-range artillery
 
 metalCost: 23500
 energyCost: 615000

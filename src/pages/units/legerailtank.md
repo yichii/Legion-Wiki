@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Daedalus"
 slug: "legerailtank"
 shortRole: "Experimental Kinetic Weapons Platform"
-type: "Vehicles"
+type: "T3"
 image: "/images/units/legerailtank.png"
 description: |
   **The Daedalus** is a tier-3 heavy railgun platform designed for long-range siege and direct firepower dominance. Its main cannon, the *Siege Rail Accelerator*, deals devastating armor-piercing shots ideal for shredding high-HP targets and breaking static defenses.

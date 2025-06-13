@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Javelin"
 slug: "legjav"
 shortRole: "Amphibious Raider"
-type: "Bots"
+type: "T3"
 image: "/images/units/legjav.png"
 description: |
   **The Javelin** is a tier-3 heavy assault bot equipped with dual weapon systems: rapid-fire machine guns for surface combat and a rotary cannon for anti-air. It is designed to handle a wide range of threats while remaining highly mobile for its class.

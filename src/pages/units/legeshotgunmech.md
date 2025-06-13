@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Praetorian"
 slug: "legeshotgunmech"
 shortRole: "Multi-Weapon Shotgun Assault Mech"
-type: "Bots"
+type: "T3"
 image: "/images/units/legeshotgunmech.png"
 description: |
   **The Praetorian** is a tier-3 experimental unit that brings overwhelming close- to mid-range firepower to the battlefield. Equipped with a dual heavy shotgun, long-range cluster plasma cannon, multi-rocket system, and a dedicated anti-air minigun, it can engage any target category effectively — air or ground.

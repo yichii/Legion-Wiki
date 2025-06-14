@@ -10,6 +10,8 @@ description: |
 
   Though costly, it excels at punishing concentrated assaults and slow-pushing enemies. However, it lacks anti-air capabilities and should be complemented by dedicated AA defenses.
 
+  Bastion also features a **"turtle shell" mode**, toggled via an ON/OFF button, which transforms it into a fortified T3 wall. While in this mode, its durability increases by **300%**, making it exceptionally resistant to artillery and nuclear bombardment. This defensive stance is especially useful when under heavy long-range fire.
+
   **Best used for:** Frontline anchoring, punishing swarm pushes, energy-efficient defense  
   **Avoid:** Air attacks, EMP, and long-range artillery duels
 

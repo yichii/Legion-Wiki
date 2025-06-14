@@ -80,7 +80,7 @@ tiers.forEach(tier => {
       .filter(tier => unitsByTier[tier].length > 0)
       .map(tier => (
       <section>
-        <h2 style="margin-top: 2rem;">{tierLabels[tier as 'T1' | 'T2' | 'T3']}</h2>
+        <h2 style="margin-top: 2rem; color: #0f0;">{tierLabels[tier as 'T1' | 'T2' | 'T3']}</h2>
         <div class="unit-grid">
           {unitsByTier[tier].map(unit => (
             <UnitCard

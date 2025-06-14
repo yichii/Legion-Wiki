@@ -18,7 +18,7 @@ metalCost: 120
 energyCost: 950
 buildTime: 1800
 health: 610
-sightRange: 380
+sightRange: 380/800(Air)
 speed: 55
 weapons: "Advanced Ground-to-Air Salvo Missle Launcher"
 dps: 55

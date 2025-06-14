@@ -17,7 +17,7 @@ metalCost: 820
 energyCost: 13000
 buildTime: 19000
 health: 1750
-sightRange: 525
+sightRange: 525/1000(Air)
 weapons: Heavy Anti-Air Gatling Gun
 dps: 1080.0
 weaponRange: 850

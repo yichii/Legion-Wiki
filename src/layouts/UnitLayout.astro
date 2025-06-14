@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const {
-  title, image, type, counterpart, description,
+  title, image, type, counterpart, description, shortRole,
   metalCost, energyCost, buildTime, health, sightRange,
   speed, weapons, dps, weaponRange, techLevel, buildPower,
   radarRange, jammerRange, sonarRange
@@ -38,7 +38,11 @@ const showSpeed = type !== 'Defense' && type !== 'Buildings';
       </div>
       
       <div class="stats-panel">
-        <h3>Tech Level {techLevel}</h3>
+        <div class="tech-inline-label">
+          <span class="tech-label">TECH LEVEL {techLevel}</span>
+          {shortRole && <span class="short-role">{shortRole}</span>}
+        </div>
+        
         <div class="stat-row"><span>Metal Cost</span><span>{metalCost}</span></div>
         <div class="stat-row"><span>Energy Cost</span><span>{energyCost}</span></div>
         <div class="stat-row"><span>Build Time</span><span>{buildTime}</span></div>

@@ -295,3 +295,46 @@ li.tab {
   color: var(--accent-color, #00ff00);
   margin-top: 0.1rem;
 }
+
+
+/* ─────────────────────────────
+🔗 Tech Row Styles
+───────────────────────────── */
+.tech-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-badge {
+  background-color: #111;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.unit-role-inline {
+  font-size: 0.75rem;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tech-inline-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.short-role {
+  font-size: 1rem;
+  color: #00ff00; /* Or whatever your role color is */
+  white-space: nowrap;
+}

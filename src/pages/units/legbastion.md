@@ -19,9 +19,9 @@ metalCost: 4200
 energyCost: 58000
 buildTime: 79000
 health: 12000
-sightRange: 780
+sightRange: 780/1170(Air)
 weapons: Heavy Sustained Sweepfire Heat Ray
-dps: 52  # 155 / 3s, no bonus calc
+dps: 620-1240  # 155 / 3s, no bonus calc
 weaponRange: 1100
 techLevel: 2
 ---

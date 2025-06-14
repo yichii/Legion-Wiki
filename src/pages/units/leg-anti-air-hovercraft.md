@@ -17,7 +17,7 @@ metalCost: 210
 energyCost: 4300
 buildTime: 3300
 health: 1120
-sightRange: 509
+sightRange: 509/800(Air)
 speed: 89
 weapons: "Light Ground-to-Air Gatling Gun"
 dps: 120

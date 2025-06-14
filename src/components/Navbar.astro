@@ -27,114 +27,45 @@ const inactiveTypes = ["Sea"];
         <span class="tab-shape">
           {name === "Bots" && <svg><circle cx="6" cy="6" r="6" fill="white" /></svg>}
           {name === "Vehicles" && <svg><polygon points="6,0 12,6 6,12 0,6" fill="white" /></svg>}
-          {name === "T3" && (
-          <svg viewBox="0 0 24 24" width="16" height="16" style="transform: translateY(1px)">
-            <path
-            d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.6L6 22l1.5-7.2L2 10l7.1-1.1L12 2z"
-            fill="white"
-            />
-          </svg>
-          )}
-          
-          
-          {name === "Air" && <svg><polygon points="6,0 12,10 0,10" fill="white" /></svg>}
-          {name === "Sea" && <svg><circle cx="6" cy="6" r="5" stroke="white" stroke-width="2" fill="none" /></svg>}
-          {name === "Hover" && <svg><ellipse cx="6" cy="6" rx="5" ry="3" fill="white" /></svg>}
-          {name === "Factories" && <svg><rect width="12" height="12" fill="white" /></svg>}
-          {name === "Defense" && (
-          <svg viewBox="0 0 24 24">
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="white" />
-          </svg>
-          )}
-          {name === "Buildings" && <svg><rect x="1" y="1" width="10" height="10" fill="white" /></svg>}
-        </span>
+          { name === "T3" && (
+          <svg
+          viewBox="0 0 24 24"
+          class="t3-star-icon"
+          >
+          <path
+          d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.6L6 22l1.5-7.2L2 10l7.1-1.1L12 2z"
+          fill="white"
+          />
+        </svg>
+        )}
         
-        {isDisabled ? (
-          <span class="tab-link disabled" title="Coming Soon">{name}</span>
-          ) : (
-          <a href={`/type/${name.toLowerCase()}`} class={`tab-link ${isActive ? 'active' : ''}`}>
-            {name}
-          </a>
-          )}
-        </li>
-        );
-      })}
-    </ul>
-  </nav>
-  
-  <style>
-    nav {
-      background-color: #111;
-      padding: 1rem;
-      margin-bottom: 2rem;
-    }
+        
+        
+        
+        {name === "Air" && <svg><polygon points="6,0 12,10 0,10" fill="white" /></svg>}
+        {name === "Sea" && <svg><circle cx="6" cy="6" r="5" stroke="white" stroke-width="2" fill="none" /></svg>}
+        {name === "Hover" && <svg><ellipse cx="6" cy="6" rx="5" ry="3" fill="white" /></svg>}
+        {name === "Factories" && <svg><rect width="11" height="11" fill="white" /></svg>}
+        {name === "Defense" && (
+        <svg 
+        viewBox="0 0 24 24"
+        style="width: 16; height: 16px; transform: translateY(-5px);">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="white" />
+      </svg>
+      )}
+      {name === "Buildings" && <svg><rect x="1" y="1" width="10" height="10" fill="white" /></svg>}
+    </span>
     
-    ul.nav-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 0.5rem;
-    }
-    
-    li.tab {
-      position: relative;
-      text-align: center;
-    }
-    
-    .tab-shape {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      line-height: 1;
-      transition: top 0.2s ease;
-      pointer-events: none;
-    }
-    
-    .tab:hover .tab-shape {
-      top: -18px;
-    }
-    
-    .tab-shape svg {
-      width: 12px;
-      height: 12px;
-      display: block;
-      fill: white !important;
-    }
-    
-    .tab-link {
-      display: inline-block;
-      padding: 0.4rem 0.75rem;
-      background: #1a1a1a;
-      color: #008000;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-      transition: background 0.2s;
-      min-width: 80px;
-      font-family: var(--font-sans, sans-serif);
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    
-    .tab-link:hover {
-      background: #222;
-    }
-    
-    .tab-link.active {
-      background: #00ff00;
-      color: black;
-    }
-    
-    .tab-link.disabled {
-      background: #1a1a1a;
-      color: #555;
-      cursor: not-allowed;
-      pointer-events: none;
-      font-style: italic;
-    }
-  </style>
-  
+    {isDisabled ? (
+      <span class="tab-link disabled" title="Coming Soon">{name}</span>
+      ) : (
+      <a href={`/type/${name.toLowerCase()}`} class={`tab-link ${isActive ? 'active' : ''}`}>
+        {name}
+      </a>
+      )}
+    </li>
+    );
+  })}
+</ul>
+</nav>
+

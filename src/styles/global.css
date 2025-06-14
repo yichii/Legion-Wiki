@@ -34,6 +34,85 @@ h1, h2, h3 {
 /* ─────────────────────────────
 🔗 Navbar Styles
 ───────────────────────────── */
+nav {
+  background-color: #111;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+ul.nav-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+li.tab {
+  position: relative;
+  text-align: center;
+}
+
+.tab-shape {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  transition: top 0.2s ease;
+  pointer-events: none;
+}
+
+.tab:hover .tab-shape {
+  top: -18px;
+}
+
+.tab-shape svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+  fill: white !important;
+}
+
+.tab-link {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  background: #1a1a1a;
+  color: #008000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s;
+  min-width: 80px;
+  font-family: var(--font-sans, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.tab-link:hover {
+  background: #222;
+}
+
+.tab-link.active {
+  background: #00ff00;
+  color: black;
+}
+
+.tab-link.disabled {
+  background: #1a1a1a;
+  color: #555;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-style: italic;
+}
+
+@media (hover: none) {
+  .tab-shape {
+    display: none;
+  }
+}
 
 .page {
   max-width: 1200px;
@@ -141,4 +220,78 @@ h1, h2, h3 {
 
 .feedback-fab:hover {
   background: #d62839;
+}
+
+.t3-star-icon {
+  width: 20px !important;
+  height: 20px !important;
+  transform: translateY(-5px);
+}
+
+/* ─────────────────────────────
+🔗 UnitCard Styles
+───────────────────────────── */
+.unit-card {
+  position: relative;
+  max-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.unit-image-container {
+  position: relative;
+}
+
+.tech-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #111;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.unit-thumbnail {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.unit-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: bottom 0.25s ease;
+  padding: 0.25rem;
+}
+
+.unit-card:hover .unit-overlay {
+  bottom: 0;
+}
+
+.unit-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.unit-role {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-color, #00ff00);
+  margin-top: 0.1rem;
 }

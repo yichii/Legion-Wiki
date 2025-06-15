@@ -7,12 +7,13 @@ type: "Vehicles"
 image: "/images/units/leg-fast-burst-fire-raiding-vehicle.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
-  **The Boreas** is a stealth-enabled, long-range rocket launcher designed to devastate enemy positions without ever revealing its location. Equipped with a high-trajectory starburst rocket system, it delivers powerful indirect fire from extreme distances, striking targets before they can respond.
+  **The Quickshot** is a high-speed burst-fire raiding vehicle designed for aggressive flanking and harassment. Armed with twin plasma cannons that fire in rapid bursts, it can quickly deal significant damage before darting out of range, making it ideal for hit-and-run tactics.
 
-  Thanks to its stealth capabilities, the Boreas excels at hit-and-run bombardments, ambushing static defenses, and harassing key infrastructure — all while remaining off enemy radar. It thrives when used in combination with forward scouts or radar units.
+  With excellent mobility and decent vision, the Quickshot excels at scouting, chasing down retreating units, and disrupting isolated targets. However, its light armor and short range make it vulnerable if it overcommits or gets caught in prolonged engagements.
 
-  **Best used for:** Stealthy fire support, softening defenses, long-range harassment  
-  **Avoid:** Close-range encounters, AoE retaliation, operating without vision support
+  **Best used for:** Ambushes, skirmishing, flanking soft targets  
+  **Avoid:** Head-on duels, static defenses, concentrated fire
+
 metalCost: 250
 energyCost: 4100
 buildTime: 4500

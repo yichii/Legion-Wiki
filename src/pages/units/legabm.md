@@ -6,7 +6,7 @@ shortRole: "Anti-Nuke System"
 type: Defense
 image: "/images/units/legabm.png"
 description: |
-  **The Anti-Nuke Launcher** is a critical defensive structure that intercepts incoming ICBMs and nuclear artillery shells. Once stockpiled with anti-nuke missiles, it automatically protects nearby areas within its large coverage radius.
+  **The Aegis** is a critical defensive structure that intercepts incoming ICBMs and nuclear artillery shells. Once stockpiled with anti-nuke missiles, it automatically protects nearby areas within its large coverage radius.
 
   Though it does not attack conventional units, it plays a vital role in late-game base defense, especially against players investing in long-range nuclear capabilities.
 

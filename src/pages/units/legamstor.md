@@ -6,7 +6,7 @@ shortRole: "Increases Metal Storage (10000)"
 type: "Buildings"
 image: "/images/units/legamstor.png"
 description: |
-  **The Advanced Metal Storage** greatly increases your metal capacity, allowing commanders to sustain production and avoid overflow in high-income scenarios. While it does not generate or reclaim metal, it’s vital for maximizing efficiency during late-game eco spikes.
+  **The Hardened Metal Storage** greatly increases your metal capacity, allowing commanders to sustain production and avoid overflow in high-income scenarios. While it does not generate or reclaim metal, it’s vital for maximizing efficiency during late-game eco spikes.
 
   Best placed in protected areas, as its large health pool makes it durable but still vulnerable to concentrated attacks or chain explosions.
 

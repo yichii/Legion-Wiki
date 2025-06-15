@@ -6,7 +6,7 @@ shortRole: "Nuclear ICBM Launcher"
 type: Defense
 image: "/images/units/legsilo.png"
 description: |
-  **The Silo** is a long-range strategic missile launcher capable of devastating entire areas with a single thermonuclear warhead. Once stockpiled, its missiles can be manually targeted across nearly the entire map, obliterating key enemy structures, armies, or strongholds.
+  **The Supernova** is a long-range strategic missile launcher capable of devastating entire areas with a single thermonuclear warhead. Once stockpiled, its missiles can be manually targeted across nearly the entire map, obliterating key enemy structures, armies, or strongholds.
 
   While immensely powerful, it requires a substantial investment in energy and metal to produce and fire. Vulnerable to raids and precision strikes — protect it accordingly.
 

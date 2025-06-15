@@ -7,7 +7,7 @@ type: "Factories"
 image: "/images/units/leg-hovercraft-platform.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
-  The **Hovercraft Plant** is a factory capable of producing hovercraft units and can only be built on land.
+  The **Hovercraft Platform** is a factory capable of producing hovercraft units and can only be built on land.
 metalCost: 900
 energyCost: 3000
 buildTime: 11000

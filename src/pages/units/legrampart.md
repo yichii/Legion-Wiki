@@ -6,7 +6,7 @@ shortRole: "Geothermal Anti-Nuke, Jammer, Radar, and Drone Platform"
 type: "Buildings"
 image: "/images/units/legrampart.png"
 description: |
-  The **Rampart** is a high-tech multipurpose geothermal plant. It generates energy, jams enemy radar, detects units over a wide range, and acts as both an **anti-nuke interceptor** and **drone carrier**. It automatically stockpiles interceptors and deploys heavy drones for battlefield support.
+  The **Rampart** is a high-tech multipurpose geothermal powerplant. It generates energy, jams enemy radar, detects units over a wide range, and acts as both an **anti-nuke interceptor** and **drone carrier**. It automatically stockpiles interceptors and deploys heavy drones for battlefield support.
 
   This makes it a strategic cornerstone in late-game defense and area denial.
 

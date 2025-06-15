@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/UnitLayout.astro
-title: "Offshore Geothermal Plant"
+title: "Offshore Geothermal Powerplant"
 slug: "leguwgeo"
 shortRole: "Produces 300 Energy"
 type: "Buildings"
 image: "/images/units/leguwgeo.png"
 description: |
-  The **Underwater Geothermal Generator** taps into thermal vents beneath the sea, offering massive energy output for its cost.
+  The **Offshore Geothermal Powerplant** taps into thermal vents beneath the sea, offering massive energy output for its cost.
 
   It’s a mid-tech structure best placed on underwater geothermal spots. While it offers high efficiency, its dependency on specific terrain makes placement limited.
 

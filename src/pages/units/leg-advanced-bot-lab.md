@@ -7,7 +7,7 @@ type: "Factories"
 image: "/images/units/leg-advanced-bot-lab.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
-  The **Advanced Bot Plant** is a factory capable of producing Tech 2 bot units and can only be built on land.
+  The **Advanced Bot Lab** is a factory capable of producing Tech 2 bot units and can only be built on land.
 metalCost: 2900
 energyCost: 16000
 buildTime: 16800

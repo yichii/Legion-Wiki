@@ -7,12 +7,13 @@ type: "Vehicles"
 image: "/images/units/leg-mobile-cluster-artillery-vehicle.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
-  **The Arquebus** is a long-range, all-terrain heavy weapon platform designed to pierce enemy armor with pinpoint railgun shots. With excellent range and high alpha damage, it excels at sniping key targets before they can respond, especially in rugged terrain where conventional vehicles struggle.
+  **The Cleaver** is a mobile cluster artillery vehicle built to saturate enemy positions with explosive fragment shells. Unlike traditional precision artillery, the Cleaver prioritizes wide-area suppression over accuracy—its salvos deal heavy area damage, making it ideal for breaking up entrenched formations or swarms.
 
-  Its tracked legs and stable firing platform let it maneuver across hills and cliffs while maintaining accuracy. However, its low fire rate and moderate durability mean it must be protected—think of it as mobile artillery with surgical intent.
+  Though lightly armored and vulnerable when caught alone, its long range and splash potential make it an effective support piece when used behind frontlines. Terrain-aware commanders can exploit its mobility to reposition frequently and avoid counter-battery fire.
 
-  **Best used for:** Long-range fire support, punishing slow or exposed targets, terrain abuse  
-  **Avoid:** Close-range brawls, leading charges, or unsupported deployment
+  **Best used for:** Area denial, softening clustered enemies, supporting frontal pushes  
+  **Avoid:** Direct confrontation, fast raiders, or air strikes
+
 metalCost: 460
 energyCost: 5500
 buildTime: 8000

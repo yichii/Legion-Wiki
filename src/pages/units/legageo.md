@@ -6,7 +6,7 @@ shortRole: "Produces 1250 Energy (Hazardous)"
 type: "Buildings"
 image: "/images/units/legageo.png"
 description: |
-  **The Advanced Geothermal Plant** is a powerful energy structure designed to tap into geothermal vents. Producing 1250 energy per second with massive energy storage, it’s an efficient mid-to-late-game option where terrain allows.
+  **The Advanced Geothermal Powerplant** is a powerful energy structure designed to tap into geothermal vents. Producing 1250 energy per second with massive energy storage, it’s an efficient mid-to-late-game option where terrain allows.
 
   Its reliance on specific vent locations limits placement, but its output and resilience make it worth defending. Keep it away from volatile areas, as its explosion can deal significant collateral damage.
 

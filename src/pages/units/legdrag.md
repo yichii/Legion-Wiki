@@ -6,7 +6,7 @@ shortRole: "Fortification"
 type: Defense
 image: "/images/units/legdrag.png"
 description: |
-  **TDragon's Teeth** is a durable stationary wall designed to obstruct unit movement and absorb fire. It offers high crush resistance, making it excellent for delaying or diverting enemy forces.
+  **Dragon's Teeth** is a durable stationary wall designed to obstruct unit movement and absorb fire. It offers high crush resistance, making it excellent for delaying or diverting enemy forces.
 
   Though it has no attack capabilities, its robust structure and low metal cost make it ideal for chokepoints, base shielding, or strategic path control.
 

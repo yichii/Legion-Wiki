@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/UnitLayout.astro
-title: "Navar Energy Converter"
+title: "Naval Energy Converter"
 slug: "legfeconv"
 shortRole: "Converts 70 Energy into 1 Metal Per Second"
 type: "Buildings"
 image: "/images/units/legfeconv.png"
 description: |
-  The **Navar Energy Converter** turns excess energy into metal at a conversion rate of 70:1. It's a floating counterpart to the standard converter and is best deployed when you're capped on energy and need more metal income.
+  The **Naval Energy Converter** turns excess energy into metal at a conversion rate of 70:1. It's a floating counterpart to the standard converter and is best deployed when you're capped on energy and need more metal income.
 
   It’s fragile and water-bound, so place it in protected locations or behind naval defenses.
 

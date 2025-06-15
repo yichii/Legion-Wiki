@@ -296,6 +296,16 @@ li.tab {
   margin-top: 0.1rem;
 }
 
+.unit-card:hover .unit-overlay {
+  bottom: 0;
+}
+
+/* 👇 This is the important mobile-only fix */
+@media (hover: none) {
+  .unit-overlay {
+    bottom: 0 !important;
+  }
+}
 
 /* ─────────────────────────────
 🔗 Tech Row Styles

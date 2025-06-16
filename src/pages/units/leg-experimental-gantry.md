@@ -8,6 +8,7 @@ image: "/images/units/leg-experimental-gantry.png"
 counterpart: "/images/arm-lazarus.png"
 description: |
   The **Experimental Gantry** is a factory capable of producing powerful experimental units.
+metalCost: 8400
 energyCost: 62000
 buildTime: 67300
 health: 17800

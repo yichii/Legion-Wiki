@@ -16,7 +16,7 @@ description: |
 
 metalCost: 550
 energyCost: 5500
-buildTime: 1
+buildTime: 10000
 health: 10000
 sightRange: 400
 speed: 60

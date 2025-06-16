@@ -21,6 +21,6 @@ sightRange: 250/375(Air)
 speed: 230
 weapons: "Martyr Trigger"
 dps: 46
-weaponRange: 0
+weaponRange: 500
 techLevel: 1
 ---

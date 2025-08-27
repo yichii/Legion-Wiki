@@ -13,12 +13,12 @@ description: |
   **Best used for:** Long-range sieging, area denial, supporting pushes through entrenched lines  
   **Avoid:** Flank attacks, massed air without AA support, being stunned mid-frontline
 
-metalCost: 8000
-energyCost: 180000
-buildTime: 140000
-health: 17000
-sightRange: 700
-speed: 60
+metalCost: 6500
+energyCost: 165000
+buildTime: 125000
+health: 16500
+sightRange: 750
+speed: 61
 weapons: |
   Siege Rail Accelerator  
   Quad Rapid-Fire Machine Guns

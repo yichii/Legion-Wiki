@@ -28,7 +28,7 @@ const unitFiles = import.meta.glob<{ frontmatter: Unit }>('../pages/units/*.md',
 const units: Unit[] = Object.values(unitFiles).map(mod => mod.frontmatter);
 
 // Define custom order
-const typeOrder = ["Bots", "Vehicles", "Air", "Sea", "Hover", "Factories", "Defense", "Buildings"];
+const typeOrder = ["Bots", "Vehicles", "T3", "Air", "Sea", "Hover", "Factories", "Defense", "Buildings"];
 
 // Group by type
 const grouped = new Map<string, Unit[]>();

@@ -2,7 +2,7 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Daedalus"
 slug: "legerailtank"
-shortRole: "Experimental Rail Accelarator Tank"
+shortRole: "Experimental Rail Accelerator Tank"
 type: "T3"
 image: "/images/units/legerailtank.png"
 description: |

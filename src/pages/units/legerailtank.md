@@ -2,16 +2,16 @@
 layout: ../../layouts/UnitLayout.astro
 title: "Daedalus"
 slug: "legerailtank"
-shortRole: "Experimental Kinetic Weapons Platform"
+shortRole: "Experimental Rail Accelarator Tank"
 type: "T3"
 image: "/images/units/legerailtank.png"
 description: |
-  **The Daedalus** is a tier-3 heavy railgun platform designed for long-range siege and direct firepower dominance. Its main cannon, the *Siege Rail Accelerator*, deals devastating armor-piercing shots ideal for shredding high-HP targets and breaking static defenses.
+  **Daedalus** is a tier-3 heavy siege platform armed exclusively with triple-linked **Siege Rail Accelerators**. These hypervelocity railguns punch through armor and fortifications with devastating accuracy, functioning as long-range energy slugs that can penetrate lined-up targets.  
 
-  In addition to its primary weapon, it features quad-mounted machine guns for close-range suppression and anti-light screening. With solid durability and surprising mobility for its size, it can push through defended zones and serve as the backbone of a late-game armored column.
+  Unlike most heavy units, Daedalus features an **advanced smart targeting system**: within each burst, it can automatically retarget its railgun shots to avoid overkill. This ensures maximum damage efficiency, preventing wasted fire on enemies already crippled or destroyed in the opening hits.  
 
-  **Best used for:** Long-range sieging, area denial, supporting pushes through entrenched lines  
-  **Avoid:** Flank attacks, massed air without AA support, being stunned mid-frontline
+  **Best used for:** Sniping high-value units, breaking fortified positions, precision long-range fire support  
+  **Avoid:** Being caught in close-quarters brawls, extended artillery duels without cover, energy starvation
 
 metalCost: 6500
 energyCost: 165000
@@ -20,9 +20,8 @@ health: 16500
 sightRange: 750
 speed: 61
 weapons: |
-  Siege Rail Accelerator  
-  Quad Rapid-Fire Machine Guns
+  Triple Siege Rail Accelerator  
 dps: 1760
-weaponRange: 901/500
+weaponRange: 1000
 techLevel: 3
 ---

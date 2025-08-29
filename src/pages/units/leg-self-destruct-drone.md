@@ -17,10 +17,10 @@ metalCost: 65
 energyCost: 2000
 buildTime: 2200
 health: 160
-sightRange: 250/375(Air)
+sightRange: 250 / 375(Air)
 speed: 230
 weapons: "Martyr Trigger"
-dps: 46
-weaponRange: 500
+dps: "46 / 440(Burst)"
+weaponRange: "500 / 100(AoE)"
 techLevel: 1
 ---

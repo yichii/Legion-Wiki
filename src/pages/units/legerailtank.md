@@ -20,7 +20,7 @@ health: 16500
 sightRange: 750
 speed: 61
 weapons: |
-  Triple Siege Rail Accelerator  
+  3x Siege Rail Accelerator  
 dps: 1760
 weaponRange: 1000
 techLevel: 3

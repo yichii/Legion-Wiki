@@ -1,0 +1,12 @@
+# robots.txt for https://legionwiki.info
+
+User-agent: *
+Allow: /
+
+# Optional: block private or dev routes
+Disallow: /admin
+Disallow: /drafts
+Disallow: /api
+
+# Point search engines to your sitemap
+Sitemap: https://legionwiki.info/sitemap.xml

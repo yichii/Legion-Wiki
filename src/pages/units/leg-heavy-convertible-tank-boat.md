@@ -14,13 +14,13 @@ description: |
   **Best used for:** Amphibious assaults, holding beachheads, hybrid land/sea pushes  
   **Avoid:** Swarms of air units or being left without support — it's strong, not invincible
 metalCost: 650
-energyCost: 1200
+energyCost: 12000
 buildTime: 16000
 health: 3500
 sightRange: 500
-speed: 60
+speed: 55(71.5 Speed in Sea)
 weapons: "Medium Ground-to-Ground Gauss Cannon"
 dps: 235
-weaponRange: 600
+weaponRange: 550
 techLevel: 2
 ---

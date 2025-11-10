@@ -8,7 +8,7 @@ image: "/images/units/legnavyfrigate.png"
 description: |
   The **Argonaut** is a fast, lightly armored torpedo ship designed for early-game naval control and anti-submarine warfare.
 
-  Its twin torpedo launchers can engage both surface and underwater threats, making it an excellent multipurpose escort for your fleet.
+  Its torpedo launchers can engage both surface and underwater threats, making it an excellent multipurpose escort for your fleet.
 
   **Best used for:** Early naval skirmishes and anti-sub defense  
   **Avoid:** Sustained fights against heavier destroyers or coastal artillery
@@ -19,7 +19,7 @@ health: 2600
 sightRange: 500
 sonarRange: 400
 speed: 72
-weapons: "Dual Deck Torpedo Launchers"
+weapons: "Torpedo Launcher"
 dps: 215
 weaponRange: 460
 techLevel: 1

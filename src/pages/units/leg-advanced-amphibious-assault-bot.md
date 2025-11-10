@@ -13,15 +13,15 @@ description: |
 
   **Best used for:** Shoreline control, anti-sub operations, hybrid land/sea assaults  
   **Avoid:** Prolonged duels with dedicated long-range or airborne units
-metalCost: 660
-energyCost: 19000
+metalCost: 600
+energyCost: 13200
 buildTime: 19000
 health: 2750
 sightRange: 450
-speed: 48
+speed: 48(62.4 Speed in Sea)
 weapons: "Heavy Ground-to-Ground Cleansing Heat Ray / Depth-Charge Launcher"
 dps: 265-413
-weaponRange: 400
+weaponRange: 400 / 600
 radarRange: 300
 sonar: 700
 techLevel: 2

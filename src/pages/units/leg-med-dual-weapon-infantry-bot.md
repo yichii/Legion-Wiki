@@ -14,10 +14,10 @@ description: |
   **Best used for:** Close-quarters brawling, assaulting positions, tank cracking  
   **Avoid:** Being kited, long-range fights, open retreats
 
-metalCost: 310
+metalCost: 330
 energyCost: 2600
 buildTime: 4400
-health: 1540
+health: 1725
 sightRange: 400
 speed: 42
 weapons: |

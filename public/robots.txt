@@ -9,4 +9,4 @@ Disallow: /drafts
 Disallow: /api
 
 # Point search engines to your sitemap
-Sitemap: https://legionwiki.info/sitemap.xml
+Sitemap: https://legionwiki.info/sitemap-index.xml

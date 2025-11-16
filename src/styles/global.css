@@ -78,7 +78,7 @@ li.tab {
   display: inline-block;
   padding: 0.4rem 0.75rem;
   background: #1a1a1a;
-  color: #008000;
+  color: var(--accent-color); /* ✅ good contrast */
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
@@ -88,6 +88,7 @@ li.tab {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+
 
 .tab-link:hover {
   background: #222;
@@ -100,7 +101,7 @@ li.tab {
 
 .tab-link.disabled {
   background: #1a1a1a;
-  color: #555;
+  color: #9ca3af;          /* lighter gray, passes contrast */
   cursor: not-allowed;
   pointer-events: none;
   font-style: italic;
@@ -204,8 +205,8 @@ li.tab {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: #e63946;
-  color: white;
+  background: #d62839;   /* slightly darker red → better contrast with white */
+  color: #ffffff;
   padding: 0.75rem 1.2rem;
   border-radius: 999px;
   font-weight: 600;
@@ -217,8 +218,9 @@ li.tab {
 }
 
 .feedback-fab:hover {
-  background: #d62839;
+  background: #b91c1c;   /* darker on hover, still readable */
 }
+
 
 .t3-star-icon {
   width: 20px !important;

@@ -1,19 +1,26 @@
 ---
-// props
 const { title, image, slug, shortRole, techLevel, showTechBadge = true } = Astro.props;
+
+// image is like "/units/starfall.png"
+// we remove the extension to generate .webp and .avif versions
+const baseImage = image.replace(/\.(png|jpg|jpeg)$/i, "");
 ---
 
 <a href={`/units/${slug}`} class="unit-card">
   <div class="unit-image-container">
     {showTechBadge && (
       <span class="tech-badge">T{techLevel}</span>
-      )}
-      <img src={image} alt={title} class="unit-thumbnail" />
-      <div class="unit-overlay">
-        <div class="unit-name">{title}</div>
-        <div class="unit-role">{shortRole}</div>
-      </div>
-    </div>
-  </a>
+    )}
 
-  
+    <picture>
+      <source srcset={`${baseImage}.avif`} type="image/avif" />
+      <source srcset={`${baseImage}.webp`} type="image/webp" />
+      <img src={image} alt={title} class="unit-thumbnail" loading="lazy" />
+    </picture>
+
+    <div class="unit-overlay">
+      <div class="unit-name">{title}</div>
+      <div class="unit-role">{shortRole}</div>
+    </div>
+  </div>
+</a>

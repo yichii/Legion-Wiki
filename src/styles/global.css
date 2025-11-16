@@ -1,5 +1,5 @@
 :root {
-  --font-sans: 'Rajdhani', sans-serif;
+  --font-sans: "Rajdhani", sans-serif;
   --text-color: #ddd;
   --bg-color: #111;
   --accent-color: limegreen;
@@ -13,7 +13,9 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -36,7 +38,7 @@ a {
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -51,7 +53,6 @@ a:hover::after {
   transform: scaleY(2);
   opacity: 1;
 }
-
 
 /* ─────────────────────────────
 🔗 Navbar Styles
@@ -113,7 +114,6 @@ li.tab {
   letter-spacing: 0.02em;
 }
 
-
 .tab-link:hover {
   background: #222;
 }
@@ -125,7 +125,7 @@ li.tab {
 
 .tab-link.disabled {
   background: #1a1a1a;
-  color: #9ca3af;          /* lighter gray, passes contrast */
+  color: #9ca3af; /* lighter gray, passes contrast */
   cursor: not-allowed;
   pointer-events: none;
   font-style: italic;
@@ -141,7 +141,6 @@ li.tab {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
-  
 }
 
 .layout {
@@ -229,22 +228,21 @@ li.tab {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: #d62839;   /* slightly darker red → better contrast with white */
+  background: #d62839; /* slightly darker red → better contrast with white */
   color: #ffffff;
   padding: 0.75rem 1.2rem;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   font-size: 0.95rem;
   z-index: 1000;
   transition: background 0.2s ease;
 }
 
 .feedback-fab:hover {
-  background: #b91c1c;   /* darker on hover, still readable */
+  background: #b91c1c; /* darker on hover, still readable */
 }
-
 
 .t3-star-icon {
   width: 20px !important;

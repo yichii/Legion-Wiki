@@ -349,6 +349,28 @@ li.tab {
   opacity: 0.9;
 }
 
+.unit-type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.unit-type-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 0.9rem;        /* ⬅ increases tap area */
+  min-height: 44px;              /* ⬅ recommended tap size */
+  min-width: 44px;
+
+  border-radius: 999px;
+  border: 1px solid var(--accent-color);
+
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
 .unit-role-inline {
   font-size: 0.75rem;
   color: #ccc;
@@ -369,4 +391,21 @@ li.tab {
   font-size: 1rem;
   color: #00ff00; /* Or whatever your role color is */
   white-space: nowrap;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0.1rem 0;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.4rem 0;  /* increases vertical tap area */
 }

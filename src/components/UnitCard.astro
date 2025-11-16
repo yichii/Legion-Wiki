@@ -1,9 +1,17 @@
 ---
-const { title, image, slug, shortRole, techLevel, showTechBadge = true } = Astro.props;
+const {
+  title,
+  image,
+  slug,
+  shortRole,
+  techLevel,
+  showTechBadge = true,
+  priority = false, // 👈 NEW: allow marking this card as LCP
+} = Astro.props;
 
 // image is like "/units/starfall.png"
 // we remove the extension to generate .webp and .avif versions
-const baseImage = image.replace(/\.(png|jpg|jpeg)$/i, "");
+const baseImage = image.replace(/\.(png|jpg|jpeg|webp|avif)$/i, "");
 ---
 
 <a href={`/units/${slug}`} class="unit-card">
@@ -15,7 +23,14 @@ const baseImage = image.replace(/\.(png|jpg|jpeg)$/i, "");
     <picture>
       <source srcset={`${baseImage}.avif`} type="image/avif" />
       <source srcset={`${baseImage}.webp`} type="image/webp" />
-      <img src={image} alt={title} class="unit-thumbnail" loading="lazy" />
+      <img
+        src={image}
+        alt={title}
+        class="unit-thumbnail"
+        loading={priority ? "eager" : "lazy"}
+        fetchpriority={priority ? "high" : "auto"}
+        decoding="async"
+      />
     </picture>
 
     <div class="unit-overlay">

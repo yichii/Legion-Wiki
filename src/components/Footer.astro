@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-column">
-      <h4>UNIT TYPES</h4>
+      <h2 class="footer-heading">UNIT TYPES</h2>
       <ul>
         <li><a href="/type/bots">Bots</a></li>
         <li><a href="/type/vehicles">Vehicles</a></li>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="footer-column">
-      <h4>COMMUNITY</h4>
+      <h2 class="footer-heading">COMMUNITY</h2>
       <ul>
         <li><a href="https://www.beyondallreason.info/download#Download-Play" target="_blank">Play Beyond All Reason</a></li>
         <li><a href="https://github.com/yichii/Legion-Wiki" target="_blank">LegionWiki GitHub</a></li>
@@ -23,7 +23,7 @@
         <li><a href="https://discord.com/invite/beyond-all-reason" target="_blank">BAR Discord</a></li>
       </ul>
 
-      <h4>RESOURCES</h4>
+      <h2 class="footer-heading">RESOURCES</h2>
       <ul>
         <li><a href="https://www.beyondallreason.info/units/cortex-vehicles" target="_blank">Official BAR Wiki</a></li>
         <li><a href="https://www.beyondallreason.info/" target="_blank">Official Website</a></li>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="footer-column">
-      <h4>ABOUT</h4>
+      <h2 class="footer-heading">ABOUT</h2>
       <p>This wiki is a <a href="https://github.com/yichii/Legion-Wiki" target="_blank">fan-made project</a> for <strong>Beyond All Reason (BAR)</strong>, an open-source RTS game.</p>
       <p>All unit concepts, art, and balance are the work of the BAR development team and contributors. This site is not officially affiliated with BAR.</p>
       <p><small>A project by the Legion Wiki team.</small></p>
@@ -64,10 +64,13 @@
     min-width: 180px;
   }
 
-  .footer-column h4 {
+  /* ⬇️ updated selector */
+  .footer-heading {
     color: white;
     margin-bottom: 0.5rem;
     font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .footer-column ul {

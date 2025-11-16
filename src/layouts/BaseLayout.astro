@@ -14,6 +14,7 @@ const {
 ---
 
 <html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -28,7 +29,31 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://legionwiki.info" />
     <meta property="og:image" content="/favicon.png" />
+
+    <!-- 🔥 Non-blocking Google Fonts loading for Rajdhani -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
+      />
+    </noscript>
   </head>
+
+
   
 <body class="layout-wrapper">
   <div class="layout-content">

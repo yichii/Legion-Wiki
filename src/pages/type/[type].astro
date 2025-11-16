@@ -82,17 +82,17 @@ tiers.forEach(tier => {
       <section>
         <h2 style="margin-top: 2rem; color: #0f0;">{tierLabels[tier as 'T1' | 'T2' | 'T3']}</h2>
         <div class="unit-grid">
-          {unitsByTier[tier].map(unit => (
+          {unitsByTier[tier].map((unit, index) => (
             <UnitCard
-            title={unit.title}
-            image={unit.image}
-            slug={unit.slug}
-            shortRole={unit.shortRole ?? "Unknown Role"}
-            techLevel={unit.techLevel}
-            showTechBadge={false}
+              title={unit.title}
+              image={unit.image}
+              slug={unit.slug}
+              shortRole={unit.shortRole ?? "Unknown Role"}
+              techLevel={unit.techLevel}
+              showTechBadge={false}
+              priority={tiers.indexOf(tier) === 0 && index === 0}
             />
-            
-            ))}
+          ))}
           </div>
         </section>
         ))}

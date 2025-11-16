@@ -12,6 +12,9 @@ const {
 
 const compiledDescription = marked(description);
 
+// Generate base path for avif/webp sources
+const baseImage = image.replace(/\.(png|jpg|jpeg)$/i, "");
+
 // Detection-only units logic
 const isRadarUnit = radarRange !== undefined;
 const isJammerUnit = jammerRange !== undefined;
@@ -34,7 +37,18 @@ const showSpeed = type !== 'Defense' && type !== 'Buildings';
     
     <div class="layout">
       <div class="unit-image">
-        <img src={image} alt={title} style="width: 100%; border-radius: 10px;" />
+        <picture>
+          <source srcset={`${baseImage}.avif`} type="image/avif" />
+          <source srcset={`${baseImage}.webp`} type="image/webp" />
+          <img
+            src={image}
+            alt={title}
+            style="width: 100%; border-radius: 10px;"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
       </div>
       
       <div class="stats-panel">

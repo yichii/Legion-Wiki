@@ -359,3 +359,10 @@
   }
 }
 
+.footer-list a.footer-link {
+  display: block;          /* makes the whole row clickable */
+  padding: 14px 0;         /* increases tap height */
+  margin-top: -8px;        /* visually pulls rows closer together */
+  line-height: 1.2;
+}
+

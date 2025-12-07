@@ -5,12 +5,17 @@ import CriticalStyles from "../components/CriticalStyles.astro";
 interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
 }
 
 const {
   title = "BAR Legion Units - Beyond All Reason Legion Unit Wiki",
-  description = "Browse every Legion unit in Beyond All Reason (BAR). LegionWiki is a community wiki with detailed BAR Legion unit stats, roles, costs, and strategies.",
+  description = "Browse every Legion unit in Beyond All Reason (BAR). LegionWiki is a community wiki with detailed BAR Legion unit stats, roles, roles, costs, and strategies.",
+  canonical,
 } = Astro.props;
+
+const siteUrl = "https://legionwiki.info";
+const resolvedCanonical = canonical ?? Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -22,7 +27,8 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-
+    <link rel="canonical" href={`${siteUrl}${resolvedCanonical}`} />
+    
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

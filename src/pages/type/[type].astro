@@ -25,6 +25,7 @@ type Unit = {
   buildPower?: number;
 };
 
+
 const allUnits = import.meta.glob<{ frontmatter: Unit }>('../../pages/units/*.md', { eager: true });
 const units = Object.values(allUnits).map(u => u.frontmatter);
 
@@ -42,6 +43,7 @@ export async function getStaticPaths() {
 
 const { type } = Astro.params;
 const typeCapitalized = type.charAt(0).toUpperCase() + type.slice(1);
+const typeLower = typeCapitalized.toLowerCase();
 
 // Group by tier
 const tiers = ['T1', 'T2', 'T3'];
@@ -71,7 +73,10 @@ tiers.forEach(tier => {
 });
 ---
 
-<BaseLayout title={`Legion ${typeCapitalized} Units`}>
+<BaseLayout 
+  title={`Legion ${typeCapitalized} Units`}
+  description={`Browse all Legion ${typeLower} units for Beyond All Reason (BAR). Detailed stats and roles for BAR Legion units in the Legion faction.`}
+>
   <div class="page">
     <FactionHeading faction="Legion" type={typeCapitalized} />
     <Navbar activeType={type} />

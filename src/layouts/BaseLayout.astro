@@ -28,27 +28,16 @@ const resolvedCanonical = canonical ?? Astro.url.pathname;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={`${siteUrl}${resolvedCanonical}`} />
-    
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://legionwiki.info" />
     <meta property="og:image" content="/favicon.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
+    <!-- No more Google Fonts for JS users -->
+
+    <!-- Global CSS -->
     <link
       rel="preload"
       href="/global.css"
@@ -59,12 +48,15 @@ const resolvedCanonical = canonical ?? Astro.url.pathname;
       <link rel="stylesheet" href="/global.css" />
     </noscript>
 
+    <!-- Optional: keep Rajdhani only for noscript users if you want -->
+    <!--
     <noscript>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
       />
     </noscript>
+    -->
 
     <!-- Inline critical CSS via component -->
     <CriticalStyles />

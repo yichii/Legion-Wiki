@@ -157,10 +157,26 @@
   .layout-content {
     flex: 1;
   }
-  
+
   .unit-image {
     flex: 0 0 420px; /* fixed basis */
     max-width: 420px;
+  }
+
+  .unit-image-frame {
+    width: 100%;
+    aspect-ratio: 800 / 450; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0b0b0b; /* prevents “flash” */
+  }
+
+  /* Fill the reserved box */
+  .unit-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* or 'contain' if you prefer */
   }
 
   .stats-panel {

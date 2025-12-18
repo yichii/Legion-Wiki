@@ -1,13 +1,29 @@
 ---
-import { marked } from 'marked';
-import Navbar from '../components/Navbar.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { marked } from "marked";
+import Navbar from "../components/Navbar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const {
-  title, image, type, counterpart, description, shortRole,
-  metalCost, energyCost, buildTime, health, sightRange,
-  speed, weapons, dps, weaponRange, techLevel, buildPower,
-  radarRange, jammerRange, sonarRange
+  title,
+  image,
+  type,
+  counterpart,
+  description,
+  shortRole,
+  metalCost,
+  energyCost,
+  buildTime,
+  health,
+  sightRange,
+  speed,
+  weapons,
+  dps,
+  weaponRange,
+  techLevel,
+  buildPower,
+  radarRange,
+  jammerRange,
+  sonarRange,
 } = Astro.props.frontmatter;
 
 const compiledDescription = marked(description);
@@ -22,7 +38,7 @@ const isSonarUnit = sonarRange !== undefined;
 const isSensorOnly = !weapons && (isRadarUnit || isJammerUnit || isSonarUnit);
 
 // Don't show speed for static units
-const showSpeed = type !== 'Defense' && type !== 'Buildings';
+const showSpeed = type !== "Defense" && type !== "Buildings";
 ---
 
 <BaseLayout title={`${title} - Legion Unit`}>
@@ -30,11 +46,16 @@ const showSpeed = type !== 'Defense' && type !== 'Buildings';
     <Navbar activeType={type} />
   </div>
   <div class="page">
-    <div class="unit-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div
+      class="unit-header"
+      style="display: flex; justify-content: space-between; align-items: center;"
+    >
       <h1 style="color: #0f0;">{title}</h1>
-      <a href={`/type/${type.toLowerCase()}`} class="back-link">← Back to {type} Units</a>
+      <a href={`/type/${type.toLowerCase()}`} class="back-link"
+        >← Back to {type} Units</a
+      >
     </div>
-    
+
     <div class="layout">
       <div class="unit-image">
         <picture>
@@ -43,85 +64,126 @@ const showSpeed = type !== 'Defense' && type !== 'Buildings';
           <img
             src={image}
             alt={title}
-            style="width: 100%; border-radius: 10px;"
+            width="800"
+            height="450"
+            class="unit-img"
             loading="eager"
             fetchpriority="high"
             decoding="async"
           />
         </picture>
       </div>
-      
+
       <div class="stats-panel">
         <div class="tech-inline-label">
           <span class="tech-label">TECH LEVEL {techLevel}</span>
           {shortRole && <span class="short-role">{shortRole}</span>}
         </div>
-        
-        <div class="stat-row"><span>Metal Cost</span><span>{metalCost}</span></div>
-        <div class="stat-row"><span>Energy Cost</span><span>{energyCost}</span></div>
-        <div class="stat-row"><span>Build Time</span><span>{buildTime}</span></div>
+
+        <div class="stat-row">
+          <span>Metal Cost</span><span>{metalCost}</span>
+        </div>
+        <div class="stat-row">
+          <span>Energy Cost</span><span>{energyCost}</span>
+        </div>
+        <div class="stat-row">
+          <span>Build Time</span><span>{buildTime}</span>
+        </div>
         <div class="stat-row"><span>Health</span><span>{health}</span></div>
-        <div class="stat-row"><span>Sight Range</span><span>{sightRange}</span></div>
-        
-        {type === 'Factories' ? (
-        <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
-        ) : buildPower !== undefined ? (
-        <>
-        {showSpeed && (
-          <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
-          )}
-          <div class="stat-row"><span>Build Power</span><span>{buildPower}</span></div>
-          </>
+        <div class="stat-row">
+          <span>Sight Range</span><span>{sightRange}</span>
+        </div>
+
+        {
+          type === "Factories" ? (
+            <div class="stat-row">
+              <>
+                <span>Build Power</span>
+                <span>{buildPower}</span>
+              </>
+            </div>
+          ) : buildPower !== undefined ? (
+            <>
+              {showSpeed && (
+                <div class="stat-row">
+                  <span>Speed</span>
+                  <span>{speed}</span>
+                </div>
+              )}
+              <div class="stat-row">
+                <>
+                  <span>Build Power</span>
+                  <span>{buildPower}</span>
+                </>
+              </div>
+            </>
           ) : isSensorOnly ? (
-          <>
-          {isRadarUnit && (
-            <div class="stat-row"><span>Radar Range</span><span>{radarRange}</span></div>
-            )}
-            {isJammerUnit && (
-              <div class="stat-row"><span>Jammer Range</span><span>{jammerRange}</span></div>
+            <>
+              {isRadarUnit && (
+                <div class="stat-row">
+                  <span>Radar Range</span>
+                  <span>{radarRange}</span>
+                </div>
+              )}
+              {isJammerUnit && (
+                <div class="stat-row">
+                  <span>Jammer Range</span>
+                  <span>{jammerRange}</span>
+                </div>
               )}
               {isSonarUnit && (
-                <div class="stat-row"><span>Sonar Range</span><span>{sonarRange}</span></div>
-                )}
-                {showSpeed && (
-                  <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
-                  )}
-                  </>
-                  ) : (
-                  <>
-                  {showSpeed && (
-                    <div class="stat-row"><span>Speed</span><span>{speed}</span></div>
-                    )}
-                    {weapons && (
-                      <div class="stat-row weapons-row">
-                        <span>Weapons</span>
-                        <span>
-                          {weapons.split('\n').map((line: string) => (
-                          <div>{line}</div>
-                          ))}
-                        </span>
-                      </div>
-                      )}
-                      
-                      {dps && (
-                        <div class="stat-row">
-                          <strong>DPS:</strong> {typeof dps === 'number' ? dps.toFixed(0) : dps}
-                        </div>
-                        )}
-                        
-                        
-                        {typeof weaponRange !== 'undefined' && (
-                        <div class="stat-row"><span>Weapon Range</span><span>{weaponRange}</span></div>
-                        )}
-                        
-                        </>
-                        )}
-                      </div>
-                      
-                      <div class="description">
-                        <div set:html={compiledDescription} />
-                      </div>
-                    </div>
-                  </div>
-                </BaseLayout>
-                
+                <div class="stat-row">
+                  <span>Sonar Range</span>
+                  <span>{sonarRange}</span>
+                </div>
+              )}
+              {showSpeed && (
+                <div class="stat-row">
+                  <span>Speed</span>
+                  <span>{speed}</span>
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              {showSpeed && (
+                <div class="stat-row">
+                  <span>Speed</span>
+                  <span>{speed}</span>
+                </div>
+              )}
+              {weapons && (
+                <div class="stat-row weapons-row">
+                  <span>Weapons</span>
+                  <span>
+                    {weapons.split("\n").map((line: string) => (
+                      <div>{line}</div>
+                    ))}
+                  </span>
+                </div>
+              )}
+
+              {dps && (
+                <div class="stat-row">
+                  <strong>DPS:</strong>{" "}
+                  {typeof dps === "number" ? dps.toFixed(0) : dps}
+                </div>
+              )}
+
+              {typeof weaponRange !== "undefined" && (
+                <div class="stat-row">
+                  <span>Weapon Range</span>
+                  <span>{weaponRange}</span>
+                </div>
+              )}
+            </>
+          )
+        }
+      </div>
+
+      <div class="description">
+        <div set:html={compiledDescription} />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

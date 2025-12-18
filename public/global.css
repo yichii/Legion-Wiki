@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/fonts/Rajdhani.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: optional; /* ⬅ minimizes CLS */
+}
+
 .unit-image {
   flex: 0 0 420px; /* fixed basis */
   max-width: 420px;

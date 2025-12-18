@@ -35,18 +35,16 @@ const resolvedCanonical = canonical ?? Astro.url.pathname;
     <meta property="og:url" content="https://legionwiki.info" />
     <meta property="og:image" content="/favicon.png" />
 
-    <!-- No more Google Fonts for JS users -->
-
-    <!-- Global CSS -->
     <link
       rel="preload"
-      href="/global.css"
-      as="style"
-      onload="this.rel='stylesheet'"
+      href="/fonts/Rajdhani.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <noscript>
-      <link rel="stylesheet" href="/global.css" />
-    </noscript>
+    
+    <link rel="stylesheet" href="/global.css" />
+
 
     <!-- Optional: keep Rajdhani only for noscript users if you want -->
     <!--

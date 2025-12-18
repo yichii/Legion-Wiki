@@ -42,7 +42,9 @@
     height: 1px;
     background: var(--accent-color);
     opacity: 0.6;
-    transition: opacity 0.2s, transform 0.2s;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
   }
 
   a:hover::after {
@@ -139,9 +141,10 @@
 
   .layout {
     display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* keep wrap so description can go to next line */
   }
 
   .layout-wrapper {

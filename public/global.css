@@ -1,13 +1,24 @@
 .unit-image {
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 0 0 420px; /* fixed basis */
+  max-width: 420px;
 }
 
 .stats-panel {
-  flex: 1 1 400px;
+  flex: 1 1 0;
+  min-width: 0; /* IMPORTANT: prevents flex overflow reflow */
+  width: 100%;
   background: #222;
   border-radius: 12px;
   padding: 1rem 1.5rem;
+}
+
+.description {
+  flex: 0 0 100%;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
 }
 
 .stats-panel h3 {
@@ -21,13 +32,6 @@
   justify-content: space-between;
   padding: 0.3rem 0;
   border-bottom: 1px solid #333;
-}
-
-.description {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #ccc;
 }
 
 .description p {
@@ -360,9 +364,8 @@
 }
 
 .footer-list a.footer-link {
-  display: block;          /* makes the whole row clickable */
-  padding: 14px 0;         /* increases tap height */
-  margin-top: -8px;        /* visually pulls rows closer together */
+  display: block; /* makes the whole row clickable */
+  padding: 14px 0; /* increases tap height */
+  margin-top: -8px; /* visually pulls rows closer together */
   line-height: 1.2;
 }
-

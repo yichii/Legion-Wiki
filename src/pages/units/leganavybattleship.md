@@ -6,9 +6,10 @@ shortRole: "Hybrid Cross-Terrain Battleship"
 type: "Sea"
 image: "/images/units/leganavybattleship.png"
 description: |
-  The **Scylla** is a Tier 2 heavy battleship that brings brute-force firepower to naval frontlines.
+  The **Scylla** is a Tier 2 hybrid battleship designed for both naval combat and limited land operations.
 
-  With **twin burst plasma cannons** for medium-long range pressure and **dual close-range shotguns** to punish anything that gets too near, it excels at brawling for sea control—especially when supported by AA and sonar coverage.
+  It can **move onto land at reduced speed**, but trades durability for this versatility, making it **more fragile than most battleships**. Its primary weapon is a **single burst-fire riot cannon**, delivering powerful area control rather than sustained long-range fire. Earlier prototype designs experimented with alternate weapon modes on land, but these were removed before finalization.
+
 
   **Best used for:** Frontline fleet fights, pushing into defended waters, holding mid-map sea lanes  
   **Avoid:** Sub-heavy waters without escort, getting kited by longer-range artillery ships, or diving into air dominance alone
@@ -18,7 +19,7 @@ buildTime: 36000
 health: 9000
 sightRange: 600
 speed: 25
-weapons: "Twin Burst Plasma Cannons + Dual Shotguns"
+weapons: "Burst-fire Riot Cannon + Dual Shotguns"
 dps: 822
 weaponRange: 750
 techLevel: 2

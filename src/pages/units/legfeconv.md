@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Naval Energy Converter"
 slug: "legfeconv"
 shortRole: "Converts 70 energy into 1 metal per second"
-type: "Sea"
+type: "Buildings"
 image: "/images/units/legfeconv.png"
 description: |
   The **Naval Energy Converter** is a small Legion sea economy structure that converts excess energy into metal.

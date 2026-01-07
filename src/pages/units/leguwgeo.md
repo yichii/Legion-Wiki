@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Offshore Geothermal Powerplant"
 slug: "leguwgeo"
 shortRole: "Produces 300 Energy"
-type: "Sea Structure"
+type: "Buildings"
 image: "/images/units/leguwgeo.png"
 description: |
   The **Offshore Geothermal Powerplant** is a powerful Legion sea-based energy structure that taps geothermal vents beneath the ocean to provide massive, steady energy output.

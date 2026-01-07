@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Naval Metal Storage"
 slug: "leguwmstore"
 shortRole: "Increases Metal Storage (3000)"
-type: "Sea Structure"
+type: "Buildings"
 image: "/images/units/leguwmstore.png"
 description: |
   The **Naval Metal Storage** is a Legion sea-economy structure that provides a large **metal storage buffer** underwater. Useful for stabilizing income during reclaim spikes, preventing overflow, and supporting high-throughput production.

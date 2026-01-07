@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Naval Energy Storage"
 slug: "leguwestore"
 shortRole: "Increases Energy Storage (6000)"
-type: "Sea Structure"
+type: "Buildings"
 image: "/images/units/leguwestore.png"
 description: |
   The **Naval Energy Storage** is a high-capacity submerged battery for Legion, letting you bank large amounts of energy safely beneath the waves.

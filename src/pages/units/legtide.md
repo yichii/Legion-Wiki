@@ -3,7 +3,7 @@ layout: ../../layouts/UnitLayout.astro
 title: "Tidal Generator"
 slug: "legtide"
 shortRole: "Produces Energy (depends on map)"
-type: "Sea Structure"
+type: "Buildings"
 image: "/images/units/legtide.png"
 description: |
   The **Tidal Generator** is a Legion sea-based energy structure that produces energy when placed in sufficiently deep water.

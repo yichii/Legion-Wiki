@@ -1,1 +1,4 @@
 /sitemap.xml   /sitemap-index.xml   301
+
+# Add trailing slash to any URL that doesn't look like a file (no dot)
+^/([^.?]+[^/])$  /$1/  301!

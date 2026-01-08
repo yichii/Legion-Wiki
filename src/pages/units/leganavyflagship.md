@@ -20,7 +20,7 @@ sightRange: 650
 radarRange: 1000
 speed: 63
 weapons: "Experimental Heatrays + Quad Rail Accelerators"
-dps: 0
+dps: 3067 
 weaponRange: 1000
 techLevel: 2
 ---

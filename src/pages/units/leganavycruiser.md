@@ -20,7 +20,7 @@ sightRange: 600
 sonarRange: 375
 speed: 57
 weapons: "Rapid-Fire Deck Guns + Depthcharge Launcher"
-dps: 60
+dps: 360 
 weaponRange: 600
 techLevel: 2
 ---

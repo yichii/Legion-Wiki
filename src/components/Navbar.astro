@@ -59,7 +59,7 @@ const inactiveTypes = [""];
     {isDisabled ? (
       <span class="tab-link disabled" title="Coming Soon">{name}</span>
       ) : (
-      <a href={`/type/${name.toLowerCase()}`} class={`tab-link ${isActive ? 'active' : ''}`}>
+      <a href={`/type/${name.toLowerCase()}/`} class={`tab-link ${isActive ? 'active' : ''}`}>
         {name}
       </a>
       )}

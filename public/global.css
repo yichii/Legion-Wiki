@@ -377,3 +377,53 @@
   margin-top: -8px; /* visually pulls rows closer together */
   line-height: 1.2;
 }
+
+@media (max-width: 768px) {
+  .tech-inline-label {
+    min-width: 0;
+  }
+
+  .tech-inline-label .short-role {
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    /* clamp */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+/* Weapons row spacing fix */
+.weapons-row {
+  align-items: flex-start; /* label stays aligned nicely */
+}
+
+.weapons-row > span:first-child {
+  margin-right: 0.75rem; /* space after "Weapons" */
+  white-space: nowrap;
+}
+
+.weapons-row > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* space between weapon lines */
+}
+
+@media (max-width: 768px) {
+  .weapons-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .weapons-row > span:first-child {
+    margin-right: 0;
+    font-weight: 600;
+    opacity: 0.85;
+  }
+}
+

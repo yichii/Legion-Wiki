@@ -179,6 +179,38 @@
     object-fit: cover; /* or 'contain' if you prefer */
   }
 
+  /* ============================= */
+  /* Mobile layout fix for unit pages */
+  /* ============================= */
+  @media (max-width: 768px) {
+    .page {
+      padding: 1rem;
+    }
+
+    .layout {
+      gap: 1rem;
+    }
+
+    .unit-image {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .unit-image-frame {
+      border-radius: 12px;
+    }
+
+    .unit-img {
+      object-fit: contain;
+    }
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .stats-panel {
     flex: 1 1 0;
     min-width: 0; /* IMPORTANT: prevents flex overflow reflow */
